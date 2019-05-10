@@ -5,6 +5,8 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     public Item[] items; //hardcoding an array :( sorry
+    int iMaxHP=10;
+    public int iHP;
     private void Start()
     {
                
@@ -24,6 +26,15 @@ public class PickUp : MonoBehaviour
                 {
                     items[1].amount++;
                     Destroy(collision.gameObject);
+                    break;
+                }
+            case "Health":
+                {
+                    if (iHP < iMaxHP)
+                    {
+                        Destroy(collision.gameObject);
+                        iHP++;
+                    }
                     break;
                 }
         }
