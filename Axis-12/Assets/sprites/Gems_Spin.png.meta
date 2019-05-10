@@ -167,7 +167,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -211,6 +211,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -219,17 +230,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        y: 4376
+        width: 619
+        height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 055ade2b4f6a89f468f2be251c5e0426
+      spriteID: 2b83565eaa9827c4aa0906abed075cde
       internalID: -7595371955222136301
       vertices: []
       indices: 
@@ -239,18 +250,18 @@ TextureImporter:
       name: Gems_Spin_1
       rect:
         serializedVersion: 2
-        x: 654
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        x: 669
+        y: 4350
+        width: 620
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8c19c3cdaa52a8488f89a4c42827350
+      spriteID: 8b4733e62e0e58140a3b151992c3ce22
       internalID: -3774166350461354943
       vertices: []
       indices: 
@@ -260,18 +271,18 @@ TextureImporter:
       name: Gems_Spin_2
       rect:
         serializedVersion: 2
-        x: 1308
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        x: 1334
+        y: 4370
+        width: 620
+        height: 988
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c189a864d3b1fb4d80dc29d71f3d07f
+      spriteID: ae412d6ce89893941b42533d54b66049
       internalID: 8869960503475481368
       vertices: []
       indices: 
@@ -281,18 +292,18 @@ TextureImporter:
       name: Gems_Spin_3
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        x: 2012
+        y: 4403
+        width: 536
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fe83b786afd5544ba38ef408d228bd9
+      spriteID: 2c675fc9a690e7840af1498a4e0a886d
       internalID: 2669852759054889930
       vertices: []
       indices: 
@@ -302,18 +313,18 @@ TextureImporter:
       name: Gems_Spin_4
       rect:
         serializedVersion: 2
-        x: 2616
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        x: 2624
+        y: 4418
+        width: 619
+        height: 986
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319a4344dfa993246872e97722761c39
+      spriteID: bf6917240a14a7646984fc7a65d8009b
       internalID: 505790655678896273
       vertices: []
       indices: 
@@ -323,18 +334,18 @@ TextureImporter:
       name: Gems_Spin_5
       rect:
         serializedVersion: 2
-        x: 3270
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        x: 3310
+        y: 4345
+        width: 620
+        height: 976
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4a7d183fb3c198498f1d0e93f83b44c
+      spriteID: f17c833c74b39c2469517a20092658a9
       internalID: 2215280155787607133
       vertices: []
       indices: 
@@ -344,18 +355,18 @@ TextureImporter:
       name: Gems_Spin_6
       rect:
         serializedVersion: 2
-        x: 3924
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        x: 3983
+        y: 4376
+        width: 620
+        height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5cf1032032377e479b037f825f91fea
+      spriteID: 8991d6861c0d56049bfce330c29f8893
       internalID: 8247404807739026212
       vertices: []
       indices: 
@@ -365,18 +376,18 @@ TextureImporter:
       name: Gems_Spin_7
       rect:
         serializedVersion: 2
-        x: 4578
-        y: 4323.2
-        width: 654.75
-        height: 1080.8
+        x: 4704
+        y: 4347
+        width: 534
+        height: 986
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f9b4f416d8a8424f97ea125934a4670
+      spriteID: 685a1c45c5715cd4aaa45157be7a5083
       internalID: -3280237631641524912
       vertices: []
       indices: 
@@ -387,17 +398,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        y: 3287
+        width: 616
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec92b643d8a0ccc4f94dd48bfd7b38e6
+      spriteID: 2fc1a8918373da04884ade761d4f51f9
       internalID: -921175779062015654
       vertices: []
       indices: 
@@ -407,18 +418,18 @@ TextureImporter:
       name: Gems_Spin_9
       rect:
         serializedVersion: 2
-        x: 654
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        x: 669
+        y: 3260
+        width: 620
+        height: 988
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37d99e83b52b3fb4fa47644571888313
+      spriteID: c1614eb7358ef9344a6201dee9fe5aea
       internalID: 3948568097069363185
       vertices: []
       indices: 
@@ -428,18 +439,18 @@ TextureImporter:
       name: Gems_Spin_10
       rect:
         serializedVersion: 2
-        x: 1308
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        x: 1334
+        y: 3281
+        width: 620
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3aa16ab21d0ba4a4d998faa7b237c5a1
+      spriteID: 857589406c1dc3541ba2bfff43e4ccb8
       internalID: 374198739307214133
       vertices: []
       indices: 
@@ -449,18 +460,18 @@ TextureImporter:
       name: Gems_Spin_11
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        x: 2015
+        y: 3313
+        width: 533
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6de914f2d9813b54da9e8fd0a3c7b2f3
+      spriteID: 7a417fa75be9f924897c3c83e9de22b0
       internalID: 6482928375797167556
       vertices: []
       indices: 
@@ -470,18 +481,18 @@ TextureImporter:
       name: Gems_Spin_12
       rect:
         serializedVersion: 2
-        x: 2616
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        x: 2624
+        y: 3329
+        width: 620
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cf28c5d9cbc6ef4a96b56350ff9c85a
+      spriteID: a327f21c740b67048ad403ed63f50097
       internalID: -3822373842857953800
       vertices: []
       indices: 
@@ -491,18 +502,18 @@ TextureImporter:
       name: Gems_Spin_13
       rect:
         serializedVersion: 2
-        x: 3270
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        x: 3313
+        y: 3257
+        width: 617
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1409e14e20b09834e973b6d8a3559d95
+      spriteID: 20a6e640180efb041b2acd0d67833e06
       internalID: 6967193681650311571
       vertices: []
       indices: 
@@ -512,18 +523,18 @@ TextureImporter:
       name: Gems_Spin_14
       rect:
         serializedVersion: 2
-        x: 3924
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        x: 3986
+        y: 3287
+        width: 617
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50364cd2e53e7fc438ff404bbec5e568
+      spriteID: a7d31576f3287e84697b4902f9c97354
       internalID: 3863326854186930865
       vertices: []
       indices: 
@@ -533,18 +544,18 @@ TextureImporter:
       name: Gems_Spin_15
       rect:
         serializedVersion: 2
-        x: 4578
-        y: 3243.2
-        width: 654.75
-        height: 1080.8
+        x: 4704
+        y: 3257
+        width: 534
+        height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf5f0271527c9de4981527f8e961193e
+      spriteID: 20b84b66875105f4d949a737c5016e15
       internalID: 5657987924762503825
       vertices: []
       indices: 
@@ -555,17 +566,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        y: 2197
+        width: 616
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 946b7ab618139704fa8766391775ec80
+      spriteID: ddd79de51bccfb44695abb26430f9950
       internalID: 2013295030173370725
       vertices: []
       indices: 
@@ -575,18 +586,18 @@ TextureImporter:
       name: Gems_Spin_17
       rect:
         serializedVersion: 2
-        x: 654
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        x: 672
+        y: 2168
+        width: 617
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6374dde90ae95d941b35d909a6122e8e
+      spriteID: f9cf750fe534aab4bb38c99940516bdd
       internalID: 1776092633687340092
       vertices: []
       indices: 
@@ -596,18 +607,18 @@ TextureImporter:
       name: Gems_Spin_18
       rect:
         serializedVersion: 2
-        x: 1308
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        x: 1337
+        y: 2189
+        width: 617
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 022462912e606614d968c25309fc3a5b
+      spriteID: 6d9d5eed46b52214aa5dfb25a2fa8eb8
       internalID: -5748839356716765718
       vertices: []
       indices: 
@@ -617,18 +628,18 @@ TextureImporter:
       name: Gems_Spin_19
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        x: 2015
+        y: 2222
+        width: 535
+        height: 988
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af8917814ae7c7142aab6c9eab605593
+      spriteID: 05a5eaa1534708c4a9f43375e4b39043
       internalID: -7737283905331552268
       vertices: []
       indices: 
@@ -638,18 +649,18 @@ TextureImporter:
       name: Gems_Spin_20
       rect:
         serializedVersion: 2
-        x: 2616
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        x: 2627
+        y: 2236
+        width: 617
+        height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc82e8e8b9b51ec4fa71e61a00880060
+      spriteID: e09ebc8a1253fc14b87cf2b0ed2e451e
       internalID: -6738567819364165367
       vertices: []
       indices: 
@@ -659,18 +670,18 @@ TextureImporter:
       name: Gems_Spin_21
       rect:
         serializedVersion: 2
-        x: 3270
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        x: 3313
+        y: 2165
+        width: 620
+        height: 988
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ae84949c8ba0ac4fa5f9d43b754a96f
+      spriteID: 77770b6bfe21b174d906423e8a0126be
       internalID: -5520767316961968228
       vertices: []
       indices: 
@@ -680,18 +691,18 @@ TextureImporter:
       name: Gems_Spin_22
       rect:
         serializedVersion: 2
-        x: 3924
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        x: 3986
+        y: 2197
+        width: 620
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 279e59491b936b544a413eadbde6735f
+      spriteID: 0f98d42f51597e3478cead9baea0c78b
       internalID: -5334591854038535287
       vertices: []
       indices: 
@@ -701,18 +712,18 @@ TextureImporter:
       name: Gems_Spin_23
       rect:
         serializedVersion: 2
-        x: 4578
-        y: 2163.2
-        width: 654.75
-        height: 1080.8
+        x: 4706
+        y: 2165
+        width: 532
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d62152306f96df84d9f1533859b845ac
+      spriteID: 4b8ce9dc77464714eb8d2b6e3bd0c6c1
       internalID: -4178996721908660815
       vertices: []
       indices: 
@@ -723,17 +734,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        y: 1110
+        width: 616
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c321b85ecee52b14fa4769c19af24b46
+      spriteID: 6c9c755b63debb7469a8046800ab2f85
       internalID: 3869069843758508417
       vertices: []
       indices: 
@@ -743,18 +754,18 @@ TextureImporter:
       name: Gems_Spin_25
       rect:
         serializedVersion: 2
-        x: 654
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        x: 672
+        y: 1081
+        width: 617
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c97bafe90a642d243a1a6df87f2cdad1
+      spriteID: 3830e60e4d7ead24aa70eaed198ae405
       internalID: 2430422562156846270
       vertices: []
       indices: 
@@ -764,18 +775,18 @@ TextureImporter:
       name: Gems_Spin_26
       rect:
         serializedVersion: 2
-        x: 1308
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        x: 1337
+        y: 1102
+        width: 617
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2180eadff502b2a40821a05b982cac8b
+      spriteID: f61a7a237e7b8fb49aa858c3b70b628c
       internalID: -6759392930784556436
       vertices: []
       indices: 
@@ -785,18 +796,18 @@ TextureImporter:
       name: Gems_Spin_27
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        x: 2015
+        y: 1136
+        width: 535
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a1b9e49f1becb54e9027265e83f6954
+      spriteID: 7d361c384a37a734caaef2b04e94de3a
       internalID: -5497785258275443926
       vertices: []
       indices: 
@@ -806,18 +817,18 @@ TextureImporter:
       name: Gems_Spin_28
       rect:
         serializedVersion: 2
-        x: 2616
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        x: 2627
+        y: 1152
+        width: 617
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16b7233381c66ec42b785125c6a9b8c3
+      spriteID: 1d39f9a177b366a4a8fcb8d0b1cf1a93
       internalID: -661168295813652315
       vertices: []
       indices: 
@@ -827,18 +838,18 @@ TextureImporter:
       name: Gems_Spin_29
       rect:
         serializedVersion: 2
-        x: 3270
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        x: 3313
+        y: 1078
+        width: 620
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59e98090202245749915ae2d07af985c
+      spriteID: 09d6ea82e115a014ca4fd1861b9b98be
       internalID: 7084641441138362497
       vertices: []
       indices: 
@@ -848,18 +859,18 @@ TextureImporter:
       name: Gems_Spin_30
       rect:
         serializedVersion: 2
-        x: 3924
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        x: 3986
+        y: 1110
+        width: 620
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a42642d35837b4244a2891cedf9f1ba2
+      spriteID: 0da45e099de951f438f693bb762fb219
       internalID: 3817448993323890538
       vertices: []
       indices: 
@@ -869,18 +880,18 @@ TextureImporter:
       name: Gems_Spin_31
       rect:
         serializedVersion: 2
-        x: 4578
-        y: 1083.2
-        width: 654.75
-        height: 1080.8
+        x: 4706
+        y: 1081
+        width: 532
+        height: 986
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9d4d30eee81d8c46aaa4aa5d1dffc9f
+      spriteID: c272b584694cf494fbab0690196c232f
       internalID: -6547863334543676543
       vertices: []
       indices: 
@@ -891,17 +902,17 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3.1999512
-        width: 654.75
-        height: 1080.8
+        y: 28
+        width: 616
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2955e6d3f2a421147a03be435fc944c5
+      spriteID: 273436a9704b60c4aab05314d1da2b77
       internalID: 1558202509799405387
       vertices: []
       indices: 
@@ -911,18 +922,18 @@ TextureImporter:
       name: Gems_Spin_33
       rect:
         serializedVersion: 2
-        x: 654
-        y: 3.1999512
-        width: 654.75
-        height: 1080.8
+        x: 672
+        y: 1
+        width: 617
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84449ddd042e74143b53968f242a1dfc
+      spriteID: 81a114ffd01197642adf82ddb1040bfe
       internalID: 5745653180419672140
       vertices: []
       indices: 
@@ -932,18 +943,18 @@ TextureImporter:
       name: Gems_Spin_34
       rect:
         serializedVersion: 2
-        x: 1308
-        y: 3.1999512
-        width: 654.75
-        height: 1080.8
+        x: 1337
+        y: 22
+        width: 617
+        height: 987
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f487c6d4344f4fb418d1454cd75f5702
+      spriteID: 0f96880fda45ae044aa4866cd9bb689f
       internalID: -4094936457782285768
       vertices: []
       indices: 
@@ -953,18 +964,18 @@ TextureImporter:
       name: Gems_Spin_35
       rect:
         serializedVersion: 2
-        x: 1962
-        y: 3.1999512
-        width: 654.75
-        height: 1080.8
+        x: 2015
+        y: 54
+        width: 535
+        height: 990
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b38d25d0f39135488cfadc35b4f8318
+      spriteID: e0438c0fc2f46d84ca2451cf831609d3
       internalID: 540282581240089214
       vertices: []
       indices: 
@@ -974,18 +985,18 @@ TextureImporter:
       name: Gems_Spin_36
       rect:
         serializedVersion: 2
-        x: 2624
-        y: 3
-        width: 655
-        height: 1081
+        x: 2627
+        y: 0
+        width: 617
+        height: 1059
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecdee1e5ad00e644c8674f8770a5fb1b
+      spriteID: 4cb2b11d54eeb9c40a0f8d29a3719798
       internalID: 1381211829111744160
       vertices: []
       indices: 
@@ -995,18 +1006,18 @@ TextureImporter:
       name: Gems_Spin_37
       rect:
         serializedVersion: 2
-        x: 3270
-        y: 3.1999512
-        width: 654.75
-        height: 1080.8
+        x: 3313
+        y: 0
+        width: 620
+        height: 986
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1e94a17aef53ee4bb50dd67cf1fc343
+      spriteID: e14f4b42c66889541bcf2489ef737c08
       internalID: 4242281965174293934
       vertices: []
       indices: 
@@ -1016,18 +1027,18 @@ TextureImporter:
       name: Gems_Spin_38
       rect:
         serializedVersion: 2
-        x: 3924
-        y: 3.1999512
-        width: 654.75
-        height: 1080.8
+        x: 3986
+        y: 28
+        width: 620
+        height: 989
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f6becda65e3a4b4a8580e3955652afa
+      spriteID: 67491145a03bd214788d3e2e02ebc075
       internalID: -7669022889020387672
       vertices: []
       indices: 
@@ -1037,18 +1048,18 @@ TextureImporter:
       name: Gems_Spin_39
       rect:
         serializedVersion: 2
-        x: 4578
-        y: 3.1999512
-        width: 654.75
-        height: 1080.8
+        x: 4706
+        y: 0
+        width: 532
+        height: 988
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ef9826e075397844b6824bca4ba4003
+      spriteID: 5225e5510154614408e918f14cfd51a6
       internalID: -2321912555277342701
       vertices: []
       indices: 
