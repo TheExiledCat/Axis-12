@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        PickUp.OnGet += OnKey;
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -122,6 +122,10 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Crouching", bIsCrouching);
         sr.flipX = !bIsFacingRight;
         
+    }
+    void OnKey()
+    {
+        GetComponent<PickUp>().items[1].amount++;
     }
   
 }
