@@ -249,14 +249,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.1800003, y: 8.724945}
+    oldSize: {x: 7.5100775, y: 8.67}
     newSize: {x: 0.44, y: 0.63}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44, y: 0.63}
+  m_Size: {x: 7.5100775, y: 8.67}
   m_EdgeRadius: 0
 --- !u!114 &338146650 stripped
 MonoBehaviour:
@@ -1744,7 +1744,7 @@ PrefabInstance:
     - target: {fileID: 1273130411943736504, guid: 9551c4d59262db44e89faf6de889b91d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 4.79
       objectReference: {fileID: 0}
     - target: {fileID: 1273130411943736504, guid: 9551c4d59262db44e89faf6de889b91d,
         type: 3}
@@ -1790,6 +1790,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273130411943736504, guid: 9551c4d59262db44e89faf6de889b91d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273130411943736504, guid: 9551c4d59262db44e89faf6de889b91d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218898439470007797, guid: 9551c4d59262db44e89faf6de889b91d,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218898439470007797, guid: 9551c4d59262db44e89faf6de889b91d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218898439470007797, guid: 9551c4d59262db44e89faf6de889b91d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 7218898439470007797, guid: 9551c4d59262db44e89faf6de889b91d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3240049462677624250, guid: 39788f3c39c8dcd43b9f54b7df309318,
+        type: 3}
+    - target: {fileID: 1381972878, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.35
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6548670216317342850, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
