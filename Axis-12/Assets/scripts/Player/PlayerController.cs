@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float fJumpHeight;
     public LayerMask ground;
     public int iMaxAmmo = 10;
+    
     float fMoveIn;
     bool bIsFacingRight=true;
     bool bIsGrounded;
@@ -19,11 +20,11 @@ public class PlayerController : MonoBehaviour
     bool bIsCrouching;
     Animator anim;
     int iCurrentAmmo;
-    Vector2 size;
+   
     // Start is called before the first frame update
     void Start()
     {
-        size= gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+        
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -106,13 +107,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             bIsCrouching = true;
-            Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
-            gameObject.GetComponent<BoxCollider2D>().size = S;
+            
         }
         else
         {
             bIsCrouching = false;
-            gameObject.GetComponent<BoxCollider2D>().size = size;
+           
         }
        
         
