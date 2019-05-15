@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gem
   - Key
+  - Health
   layers:
   - Default
   - TransparentFX
