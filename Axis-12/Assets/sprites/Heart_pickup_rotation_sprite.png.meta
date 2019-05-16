@@ -1,0 +1,411 @@
+fileFormatVersion: 2
+guid: ec5ef44bc7557374c9d6ea082afb7406
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2350179722267282351
+    second: Heart_pickup_rotation_sprite_0
+  - first:
+      213: 8366943558499244220
+    second: Heart_pickup_rotation_sprite_1
+  - first:
+      213: 2804874106228418445
+    second: Heart_pickup_rotation_sprite_2
+  - first:
+      213: -7189133897868940000
+    second: Heart_pickup_rotation_sprite_3
+  - first:
+      213: 4102588816992346933
+    second: Heart_pickup_rotation_sprite_4
+  - first:
+      213: -1771670467528118567
+    second: Heart_pickup_rotation_sprite_5
+  - first:
+      213: -8768207326419686679
+    second: Heart_pickup_rotation_sprite_6
+  - first:
+      213: 7306665542858995413
+    second: Heart_pickup_rotation_sprite_7
+  - first:
+      213: 2511654184882660468
+    second: Heart_pickup_rotation_sprite_8
+  - first:
+      213: -2724273839474715665
+    second: Heart_pickup_rotation_sprite_9
+  - first:
+      213: 4537420489465108727
+    second: Heart_pickup_rotation_sprite_10
+  - first:
+      213: -1263620335181474998
+    second: Heart_pickup_rotation_sprite_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 931
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e765f8e1f8fe4e46b273b8b28a47ead
+      internalID: 2350179722267282351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_1
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 0
+        width: 794
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc747b604866e1947bc13e8e692a13f9
+      internalID: 8366943558499244220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_2
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 0
+        width: 597
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212542d6b52dfca4e88ac44fabd4aa8b
+      internalID: 2804874106228418445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_3
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 0
+        width: 337
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a82debc603814a498330f4ec0a7a434
+      internalID: -7189133897868940000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_4
+      rect:
+        serializedVersion: 2
+        x: 4731
+        y: 0
+        width: 203
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8e30fff5d0be24bb9b851b4224ee71
+      internalID: 4102588816992346933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_5
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 0
+        width: 102
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a873e4417f14b446960cbf8a531afbd
+      internalID: -1771670467528118567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_6
+      rect:
+        serializedVersion: 2
+        x: 7031
+        y: 0
+        width: 31
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60384ff87afee1448955f5a278d04321
+      internalID: -8768207326419686679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_7
+      rect:
+        serializedVersion: 2
+        x: 8092
+        y: 0
+        width: 101
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a50e7f750d876348bbb801403db7110
+      internalID: 7306665542858995413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_8
+      rect:
+        serializedVersion: 2
+        x: 9134
+        y: 0
+        width: 203
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95e19fb1a6cff048ba86fcfc0eae480
+      internalID: 2511654184882660468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_9
+      rect:
+        serializedVersion: 2
+        x: 10198
+        y: 0
+        width: 339
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6561c84b791134f902f14118ed203e
+      internalID: -2724273839474715665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_10
+      rect:
+        serializedVersion: 2
+        x: 11154
+        y: 0
+        width: 591
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a2a455d2eb9ab4ca32b162252cf19d
+      internalID: 4537420489465108727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_pickup_rotation_sprite_11
+      rect:
+        serializedVersion: 2
+        x: 12229
+        y: 0
+        width: 784
+        height: 807
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fb8a38ada83b849a9eb255fa8aa93b
+      internalID: -1263620335181474998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2ece21dd40ca74940b9438476bab232b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

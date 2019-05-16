@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    public delegate void PickUpKey();
+    public static event PickUpKey OnGet;
+
     public Item[] items; //hardcoding an array :( sorry
+    
     private void Start()
     {
                
@@ -26,6 +30,8 @@ public class PickUp : MonoBehaviour
                     Destroy(collision.gameObject);
                     break;
                 }
+            
         }
     }
+    
 }
