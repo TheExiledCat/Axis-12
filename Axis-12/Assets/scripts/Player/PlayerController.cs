@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float fJumpHeight;
     public LayerMask ground;
     public int iMaxAmmo = 10;
-    
+    BoxCollider2D bc2d;
     float fMoveIn;
     bool bIsFacingRight=true;
     bool bIsGrounded;
@@ -24,10 +24,12 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        bc2d = GetComponent<BoxCollider2D>();
+        PickUp.OnGet += OnKey;
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -107,12 +109,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             bIsCrouching = true;
-            
+            bc2d.size = new Vector2(bc2d.size.x, 1.954623f);
+            bc2d.offset = new Vector2(bc2d.offset.x, -0.4676886f);
         }
         else
         {
             bIsCrouching = false;
-           
+            bc2d.offset = new Vector2(bc2d.offset.x, -0.1734972f);
+            bc2d.size = new Vector2(bc2d.size.x, 2.543005f);
         }
        
         
@@ -122,6 +126,10 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Crouching", bIsCrouching);
         sr.flipX = !bIsFacingRight;
         
+    }
+    void OnKey()
+    {
+        GetComponent<PickUp>().items[1].amount++;
     }
   
 }

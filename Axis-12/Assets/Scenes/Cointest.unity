@@ -199,62 +199,13 @@ RectTransform:
   m_AnchoredPosition: {x: -564.9, y: 268}
   m_SizeDelta: {x: 334.4, y: 270.1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &287577554 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1273130411943736500, guid: 9551c4d59262db44e89faf6de889b91d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1273130412110998880}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &287577555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287577554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ebad9d24e979444081f4d03fae4ae4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iHP: 0
-  iHearts: 0
-  hearts: []
-  full: {fileID: 0}
-  empty: {fileID: 0}
---- !u!61 &287577557
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287577554}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.44, y: 0.63}
-    newSize: {x: 0.44, y: 0.63}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.44, y: 0.63}
-  m_EdgeRadius: 0
 --- !u!114 &338146650 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 338146650, guid: 9551c4d59262db44e89faf6de889b91d,
     type: 3}
   m_PrefabInstance: {fileID: 1273130412110998880}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287577554}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6aa4e99b97858a449aaac192c4b51813, type: 3}
@@ -272,7 +223,7 @@ GameObject:
   - component: {fileID: 475916601}
   - component: {fileID: 475916600}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +556,7 @@ GameObject:
   - component: {fileID: 646715294}
   - component: {fileID: 646715293}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,7 +676,7 @@ GameObject:
   - component: {fileID: 928034735}
   - component: {fileID: 928034734}
   m_Layer: 5
-  m_Name: Image (9)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -906,7 +857,7 @@ GameObject:
   - component: {fileID: 982899370}
   - component: {fileID: 982899369}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,7 +932,7 @@ GameObject:
   - component: {fileID: 1003314376}
   - component: {fileID: 1003314375}
   m_Layer: 5
-  m_Name: Image (10)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,7 +1007,7 @@ GameObject:
   - component: {fileID: 1035981823}
   - component: {fileID: 1035981822}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1281,7 +1232,7 @@ GameObject:
   - component: {fileID: 1193180656}
   - component: {fileID: 1193180655}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1435,7 +1386,7 @@ GameObject:
   - component: {fileID: 1858817845}
   - component: {fileID: 1858817844}
   m_Layer: 5
-  m_Name: Image (8)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1510,7 +1461,7 @@ GameObject:
   - component: {fileID: 1891591992}
   - component: {fileID: 1891591991}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1585,7 +1536,7 @@ GameObject:
   - component: {fileID: 1938073960}
   - component: {fileID: 1938073959}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1734,7 +1685,7 @@ PrefabInstance:
     - target: {fileID: 1273130411943736504, guid: 9551c4d59262db44e89faf6de889b91d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.07
+      value: 4.79
       objectReference: {fileID: 0}
     - target: {fileID: 1273130411943736504, guid: 9551c4d59262db44e89faf6de889b91d,
         type: 3}
@@ -1781,8 +1732,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6548670216317342850, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[0]
+      value: 
+      objectReference: {fileID: 475916600}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[1]
+      value: 
+      objectReference: {fileID: 1193180655}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[2]
+      value: 
+      objectReference: {fileID: 646715293}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[3]
+      value: 
+      objectReference: {fileID: 982899369}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[4]
+      value: 
+      objectReference: {fileID: 1035981822}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[5]
+      value: 
+      objectReference: {fileID: 1891591991}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[6]
+      value: 
+      objectReference: {fileID: 1938073959}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[7]
+      value: 
+      objectReference: {fileID: 1858817844}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[8]
+      value: 
+      objectReference: {fileID: 928034734}
+    - target: {fileID: 287577555, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
+      propertyPath: hearts.Array.data[9]
+      value: 
+      objectReference: {fileID: 1003314375}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
 --- !u!1001 &9054952717251330555
 PrefabInstance:
