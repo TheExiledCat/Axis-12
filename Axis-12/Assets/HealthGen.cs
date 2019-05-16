@@ -48,7 +48,7 @@ public class HealthGen : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-    void LoseHP(int damage)
+    public void LoseHP(int damage)
     {
         iHP -= damage;
     }

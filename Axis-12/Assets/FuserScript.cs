@@ -50,7 +50,7 @@ public class FuserScript : Enemy
     }
     void Boom()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthGen>().iHP -= 3;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthGen>().LoseHP(3);
         Destroy(gameObject);
     }
 }

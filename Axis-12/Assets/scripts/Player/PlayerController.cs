@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public int iMaxAmmo = 10;
     BoxCollider2D bc2d;
     float fMoveIn;
-    bool bIsFacingRight = true;
+    public bool bIsFacingRight = true;
     bool bIsGrounded;
     bool bIsAimingUp;
     bool bIsWalking;
@@ -118,6 +118,14 @@ public class PlayerController : MonoBehaviour
             bc2d.offset = new Vector2(bc2d.offset.x, -0.1734972f);
             bc2d.size = new Vector2(bc2d.size.x, 2.543005f);
         }
+        if (bIsFacingRight)
+        {
+            transform.GetChild(1).position =new Vector3( transform.position.x+1.35f, transform.GetChild(1).position.y);
+        }
+        else
+        {
+            transform.GetChild(1).position = new Vector3(transform.position.x-1.35f, transform.GetChild(1).position.y);
+        } 
 
 
 

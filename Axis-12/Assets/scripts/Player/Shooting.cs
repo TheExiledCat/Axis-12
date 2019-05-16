@@ -26,7 +26,7 @@ public class Shooting : MonoBehaviour
 
     private void Spawnblock() {
  
-
+        
         Debug.Log("starting the bullet instanciate function");
         if (ammo == 0)
         {
@@ -35,14 +35,20 @@ public class Shooting : MonoBehaviour
         }
         Debug.Log("shoot"); 
         GameObject  BulletInstance;
+        
         BulletInstance = Instantiate(Bullet, BulletSpawn.transform.position, BulletSpawn.transform.rotation) as GameObject;
+
 
         Rigidbody2D BulletPlace;
         BulletPlace = BulletInstance.GetComponent<Rigidbody2D>();
         ammo -= 1;
         Debug.Log(ammo);
-        BulletPlace.AddForce(-transform.right * BulletSpeed);
-        
+        if(GetComponent<PlayerController>().bIsFacingRight)
+        BulletPlace.AddForce(transform.right * BulletSpeed);
+        else
+        {
+            BulletPlace.AddForce(-transform.right * BulletSpeed);
+        }
 
     }
 
