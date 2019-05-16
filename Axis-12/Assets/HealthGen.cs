@@ -9,7 +9,10 @@ public class HealthGen : MonoBehaviour
     public Image[] hearts;
     public Sprite full;
     public Sprite empty;
-    
+    private void Start()
+    {
+      
+    }
 
     // Update is called once per frame
     void Update()
@@ -44,5 +47,9 @@ public class HealthGen : MonoBehaviour
             iHP++;
             Destroy(collision.gameObject);
         }
+    }
+    public void LoseHP(int damage)
+    {
+        iHP -= damage;
     }
 }
