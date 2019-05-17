@@ -125,7 +125,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             transform.GetChild(1).position = new Vector3(transform.position.x-1.35f, transform.GetChild(1).position.y);
-        } 
+        }
+        if (bIsCrouching)
+        {
+            transform.GetChild(1).position = new Vector3(transform.GetChild(1).position.x , transform.position.y-0.12f);
+        }
+        else
+        {
+            transform.GetChild(1).position = new Vector3(transform.GetChild(1).position.x, transform.position.y+ 0.58f);
+        }
 
 
 

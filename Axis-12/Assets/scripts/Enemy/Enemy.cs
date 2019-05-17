@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     public bool bIsFacingRight;
     [HideInInspector]
     public SpriteRenderer sr;
-    
+    [HideInInspector]
+    public Animator anim;
     public float fMoveSpeed;
     
     public int iDamage;

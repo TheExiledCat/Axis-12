@@ -49,6 +49,7 @@ public class Shooting : MonoBehaviour
         {
             BulletPlace.AddForce(-transform.right * BulletSpeed);
         }
+        Destroy(BulletInstance, 2f);
 
     }
 

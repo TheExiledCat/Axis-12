@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: c8870a0cc328d3e40b352ef4acd359a7
+guid: 5a08a938a808367438d7939935b5961d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 575765360386627565
+    second: Lil bomb squid idle sprite_0
+  - first:
+      213: -6586977717388741212
+    second: Lil bomb squid idle sprite_1
+  - first:
+      213: 8283130079969045635
+    second: Lil bomb squid idle sprite_2
+  - first:
+      213: -7013249954577945001
+    second: Lil bomb squid idle sprite_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +52,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 416
+  spritePixelsToUnits: 357.5
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,11 +116,95 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lil bomb squid idle sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 755
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcf9c784452b5c48b643071e057f6c5
+      internalID: 575765360386627565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lil bomb squid idle sprite_1
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 755
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2077329ffe036c84aa004ce923449341
+      internalID: -6586977717388741212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lil bomb squid idle sprite_2
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 0
+        width: 755
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bd4495e1c472c4eb2023326722d32f
+      internalID: 8283130079969045635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lil bomb squid idle sprite_3
+      rect:
+        serializedVersion: 2
+        x: 2366
+        y: 0
+        width: 755
+        height: 684
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ed38868b0cfe74a8d6474237c8851e
+      internalID: -7013249954577945001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e51a65ea2b337e540af43009515a917e
+    spriteID: df09963981fe1194c81582fe252be4c1
     internalID: 0
     vertices: []
     indices: 
