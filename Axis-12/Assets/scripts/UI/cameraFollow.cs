@@ -9,8 +9,11 @@ public class cameraFollow : MonoBehaviour {
     public float xMax;
     public Transform Target;
     public float Speed = 0.125f;
-    
-    
+
+    private void Start()
+    {
+        Target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
     void LateUpdate()
     {
        transform.position = new Vector3(Target.position.x,transform.position.y,transform.position.z);

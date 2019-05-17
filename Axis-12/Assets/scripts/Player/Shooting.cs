@@ -17,8 +17,8 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
-        GameObject PlayerControl = GameObject.Find("Player");
-        PlayerControllerScript = PlayerControl.GetComponent<PlayerController>();
+        
+        PlayerControllerScript = GetComponent<PlayerController>();
         ammo = PlayerControllerScript.iMaxAmmo;
 
     }
@@ -43,11 +43,19 @@ public class Shooting : MonoBehaviour
         BulletPlace = BulletInstance.GetComponent<Rigidbody2D>();
         ammo -= 1;
         Debug.Log(ammo);
-        if(GetComponent<PlayerController>().bIsFacingRight)
-        BulletPlace.AddForce(transform.right * BulletSpeed);
+        if (GetComponent<PlayerController>().bIsFacingRight)
+        {
+            if(!PlayerControllerScript.bIsAimingUp)
+            BulletPlace.AddForce(BulletSpawn.transform.right * BulletSpeed);
+            else if(PlayerControllerScript.bIsAimingUp)
+            BulletPlace.AddForce(new Vector2(BulletSpeed,BulletSpeed));
+        }
         else
         {
-            BulletPlace.AddForce(-transform.right * BulletSpeed);
+            if (!PlayerControllerScript.bIsAimingUp)
+                BulletPlace.AddForce(-BulletSpawn.transform.right * BulletSpeed);
+            else if (PlayerControllerScript.bIsAimingUp)
+                BulletPlace.AddForce(new Vector2(-BulletSpeed, BulletSpeed));
         }
         Destroy(BulletInstance, 2f);
 
@@ -55,9 +63,9 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if (Click == true);
+        if (Click == true)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.L))
             {
                 Debug.Log("u clicked");
                 Debug.Log("pressed space bullet will now spawn");
