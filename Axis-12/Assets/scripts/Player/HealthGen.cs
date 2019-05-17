@@ -7,8 +7,7 @@ public class HealthGen : MonoBehaviour
     public int iHP;
     public int iHearts;
     public Image[] hearts;
-    public Sprite full;
-    public Sprite empty;
+   
     private void Start()
     {
       
@@ -23,15 +22,8 @@ public class HealthGen : MonoBehaviour
         }
         for (int i = 0; i < hearts.Length; i++)
         {
+           
             if (i < iHP)
-            {
-                hearts[i].sprite = full;
-            }
-            else
-            {
-                hearts[i].sprite = empty;
-            }
-            if (i < iHearts)
             {
                 hearts[i].enabled = true;
             }
