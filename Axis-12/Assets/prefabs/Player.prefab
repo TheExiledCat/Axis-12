@@ -245,6 +245,7 @@ MonoBehaviour:
     m_Bits: 256
   iMaxAmmo: 10
   bIsFacingRight: 1
+  bIsAimingUp: 0
   Vira: {fileID: 1044212527}
 --- !u!114 &338146650
 MonoBehaviour:

@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 6415b75cb67a30e42bfc17505b7ce04c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4273040572764509731
+    second: Chest opening animation_0
+  - first:
+      213: 6535010907247563196
+    second: Chest opening animation_1
+  - first:
+      213: -2940304797780123216
+    second: Chest opening animation_2
+  - first:
+      213: -2742947538569093307
+    second: Chest opening animation_3
+  - first:
+      213: -7435013612158023316
+    second: Chest opening animation_4
+  - first:
+      213: -5957307990636435349
+    second: Chest opening animation_5
+  - first:
+      213: -8419553896978614627
+    second: Chest opening animation_6
+  - first:
+      213: 693850504728239236
+    second: Chest opening animation_7
+  - first:
+      213: 1773242051431257340
+    second: Chest opening animation_8
+  - first:
+      213: 514112315586115413
+    second: Chest opening animation_9
+  - first:
+      213: -8178857080131100892
+    second: Chest opening animation_10
+  - first:
+      213: 3964087414935296778
+    second: Chest opening animation_11
+  - first:
+      213: -7832305214130629776
+    second: Chest opening animation_12
+  - first:
+      213: 1227576935368235382
+    second: Chest opening animation_13
+  - first:
+      213: 177627235238726381
+    second: Chest opening animation_14
+  - first:
+      213: -7253680563554694692
+    second: Chest opening animation_15
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +88,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,9 +117,378 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Chest opening animation_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1264
+        width: 958
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5087e7ee1a11274a87258bd03101b14
+      internalID: -4273040572764509731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_1
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 1264
+        width: 961
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086c8c41edc016a4ca743cfd242d67b5
+      internalID: 6535010907247563196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_2
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 1264
+        width: 970
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98fa58811232650448b8ffcc4b3ae256
+      internalID: -2940304797780123216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_3
+      rect:
+        serializedVersion: 2
+        x: 3147
+        y: 1264
+        width: 969
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7820b612dbd7f409eabfefb54adf2e
+      internalID: -2742947538569093307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_4
+      rect:
+        serializedVersion: 2
+        x: 4198
+        y: 1264
+        width: 970
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84d8b5d90c47f44cb284f1b31ecee49
+      internalID: -7435013612158023316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_5
+      rect:
+        serializedVersion: 2
+        x: 5250
+        y: 1264
+        width: 966
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf2e5bdc3dd6064caf1a23dba4840f8
+      internalID: -5957307990636435349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_6
+      rect:
+        serializedVersion: 2
+        x: 6466
+        y: 1264
+        width: 963
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d2ac3789b3c514fb2f8c9bd26c8656
+      internalID: -8419553896978614627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_7
+      rect:
+        serializedVersion: 2
+        x: 7876
+        y: 1264
+        width: 955
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98ff9e970da419418d742709b399da6
+      internalID: 693850504728239236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 959
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3078f2451fbbff243beb119195385972
+      internalID: 1773242051431257340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_9
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 0
+        width: 961
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e30f592bed18d498f258f4e92862e2
+      internalID: 514112315586115413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_10
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 0
+        width: 961
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dd2525081ca4e4f9c00164e057f554
+      internalID: -8178857080131100892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_11
+      rect:
+        serializedVersion: 2
+        x: 3146
+        y: 0
+        width: 961
+        height: 558
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef783b732dbffb549beb75c6ee9259ec
+      internalID: 3964087414935296778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_12
+      rect:
+        serializedVersion: 2
+        x: 4198
+        y: 0
+        width: 961
+        height: 779
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40693197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d567c59ad1753804b8fda0299e6bd02e
+      internalID: -7832305214130629776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_13
+      rect:
+        serializedVersion: 2
+        x: 5255
+        y: 0
+        width: 961
+        height: 779
+      alignment: 9
+      pivot: {x: 0.5, y: 0.40693197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dad656c8905a5345a98f2e4279591f9
+      internalID: 1227576935368235382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_14
+      rect:
+        serializedVersion: 2
+        x: 6302
+        y: 0
+        width: 1129
+        height: 779
+      alignment: 9
+      pivot: {x: 0.50044286, y: 0.40693197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b4421b18ef20b43aa100477e756c56
+      internalID: 177627235238726381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest opening animation_15
+      rect:
+        serializedVersion: 2
+        x: 7518
+        y: 0
+        width: 1313
+        height: 779
+      alignment: 9
+      pivot: {x: 0.65, y: 0.40693197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0622c6d0e769a45a78d374742ecc9b
+      internalID: -7253680563554694692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

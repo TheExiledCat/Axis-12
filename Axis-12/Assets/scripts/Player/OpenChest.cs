@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class OpenChest : MonoBehaviour
 {
-
-    public GameObject Chest;
+    public GameObject key;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
-    private IEnumerator OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ChestTrigger")
+        if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("OwO uve touched the blockywocky <3");
             yield return StartCoroutine("OpeningChest");
@@ -27,16 +27,20 @@ public class OpenChest : MonoBehaviour
     private IEnumerator SpawningKey()
     {
         //Key spawn animation
-        yield return new WaitForSeconds(3);
+        GameObject keystance=Instantiate(key, transform.position+Vector3.up, transform.rotation);
+        yield return new WaitForSeconds(3f);
+        Destroy(keystance);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount++;
     }
 
     private IEnumerator OpeningChest()
     {
         Debug.Log("opening the chest to getchu the key");
         //play chest opening animation
+        anim.SetTrigger("touch player");
+        yield return new WaitForSeconds(2);
         yield return StartCoroutine("SpawningKey");
-        yield return new WaitForSeconds(3);
-        Chest.active = false;
+        
             
     }
 
