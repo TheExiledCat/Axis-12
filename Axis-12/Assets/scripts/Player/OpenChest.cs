@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OpenChest : MonoBehaviour
 {
+    bool active = true;
     public GameObject key;
     Animator anim;
     // Start is called before the first frame update
@@ -14,8 +15,9 @@ public class OpenChest : MonoBehaviour
 
     private IEnumerator OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")&&active)
         {
+            active = false;
             Debug.Log("OwO uve touched the blockywocky <3");
             yield return StartCoroutine("OpeningChest");
             
@@ -27,9 +29,9 @@ public class OpenChest : MonoBehaviour
     private IEnumerator SpawningKey()
     {
         //Key spawn animation
-        GameObject keystance=Instantiate(key, transform.position+Vector3.up, transform.rotation);
+        Destroy(Instantiate(key, transform.position+Vector3.up, transform.rotation),3f);
         yield return new WaitForSeconds(3f);
-        Destroy(keystance);
+        
         GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount++;
     }
 
@@ -44,9 +46,5 @@ public class OpenChest : MonoBehaviour
             
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

@@ -324,7 +324,7 @@ TextureImporter:
         serializedVersion: 2
         x: 392
         y: 194
-        width: 94
+        width: 97
         height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -343,7 +343,7 @@ TextureImporter:
       name: tilemap unity ready_8
       rect:
         serializedVersion: 2
-        x: 486
+        x: 490
         y: 194
         width: 97
         height: 97
@@ -364,9 +364,9 @@ TextureImporter:
       name: tilemap unity ready_9
       rect:
         serializedVersion: 2
-        x: 582
+        x: 587
         y: 194
-        width: 102
+        width: 97
         height: 97
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

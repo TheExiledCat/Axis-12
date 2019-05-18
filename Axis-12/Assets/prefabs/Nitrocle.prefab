@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 1444104929}
   - component: {fileID: 1444104927}
   m_Layer: 0
-  m_Name: Fuser
+  m_Name: Nitrocle
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4856,6 +4856,7 @@ MonoBehaviour:
   fMoveSpeed: 1
   iDamage: 3
   hp: 4
+  heart: {fileID: 8765328597369589355, guid: cb54c4335e4478b43b7478012441afa8, type: 3}
 --- !u!50 &5546352024643540723
 Rigidbody2D:
   serializedVersion: 4

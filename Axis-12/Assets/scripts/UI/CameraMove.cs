@@ -14,17 +14,19 @@ public class CameraMove : MonoBehaviour
     public float xMin1;
     public float xMax1;
     bool bInNewRoom = false;
+    public GameObject check;
     private void Start()
     {
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject==check)
         {
             
             if (bInNewRoom)
             {
+                GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(transform.position.x - 2, collision.gameObject.transform.position.y);
                 bInNewRoom = !bInNewRoom;
                 Camera.main.GetComponent<cameraFollow>().xMax = xMax1;
                 Camera.main.GetComponent<cameraFollow>().yMax = yMax1;
@@ -33,6 +35,7 @@ public class CameraMove : MonoBehaviour
             }
             else if (!bInNewRoom)
             {
+                GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(transform.position.x + 2, collision.gameObject.transform.position.y);
                 xMin1 = Camera.main.GetComponent<cameraFollow>().xMin;
                 yMin1 = Camera.main.GetComponent<cameraFollow>().yMin;
                 xMax1 = Camera.main.GetComponent<cameraFollow>().xMax;

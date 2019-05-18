@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     public bool bIsFacingRight = true;
     bool bIsGrounded;
     public bool bIsAimingUp;
-    bool bIsWalking;
-    bool bIsCrouching;
+    public bool bIsWalking;
+    public bool bIsCrouching;
     Animator anim;
     int iCurrentAmmo;
     public GameObject Vira;
@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W))
         {
+            if(!bIsCrouching)
             bIsAimingUp = true;
         }
         else
@@ -78,15 +79,18 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.S))
         {
+            if (bIsAimingUp)
+                bIsAimingUp = false;
             bIsCrouching = true;
-            bc2d.size = new Vector2(bc2d.size.x, 1.954623f);
-            bc2d.offset = new Vector2(bc2d.offset.x, -0.4676886f);
+            rb.velocity = new Vector3(0, rb.velocity.y);
+            //bc2d.size = new Vector2(bc2d.size.x, 1.954623f);
+            //bc2d.offset = new Vector2(bc2d.offset.x, -0.4676886f);
         }
         else
         {
             bIsCrouching = false;
-            bc2d.offset = new Vector2(bc2d.offset.x, -0.1734972f);
-            bc2d.size = new Vector2(bc2d.size.x, 2.543005f);
+            bc2d.offset = new Vector2(bc2d.offset.x, -0.05f);
+            bc2d.size = new Vector2(bc2d.size.x, 3.5f);
         }
         if (bIsCrouching)
         {
@@ -98,7 +102,7 @@ public class PlayerController : MonoBehaviour
         }
         if (bIsFacingRight)
         {
-            Vira.transform.position = new Vector3(transform.position.x-1, 1);
+            Vira.transform.position = new Vector3(transform.position.x-1, transform.position.y+1);
             
             if(!bIsAimingUp)
                 transform.GetChild(1).position = new Vector3(transform.position.x + 1.35f, transform.GetChild(1).position.y);
@@ -107,7 +111,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Vira.transform.position = new Vector3(transform.position.x+1, 1);
+            Vira.transform.position = new Vector3(transform.position.x+1, transform.position.y+1);
             
             if (!bIsAimingUp)
                 transform.GetChild(1).position = new Vector3(transform.position.x - 1.35f, transform.GetChild(1).position.y);

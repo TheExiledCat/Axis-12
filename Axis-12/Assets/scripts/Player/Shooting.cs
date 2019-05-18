@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Shooting : MonoBehaviour
 {
 
     public GameObject Bullet;
     public GameObject BulletSpawn;
     public float BulletSpeed;
-    private int ammo;
+    [HideInInspector]
+    public  int ammo;
     private bool Click = true;
     PlayerController PlayerControllerScript;
-    
+    public Image ammobar;
 
 
 
@@ -45,13 +46,18 @@ public class Shooting : MonoBehaviour
         Debug.Log(ammo);
         if (GetComponent<PlayerController>().bIsFacingRight)
         {
-            if(!PlayerControllerScript.bIsAimingUp)
+            
+            
+if(!PlayerControllerScript.bIsAimingUp)
             BulletPlace.AddForce(BulletSpawn.transform.right * BulletSpeed);
             else if(PlayerControllerScript.bIsAimingUp)
             BulletPlace.AddForce(new Vector2(BulletSpeed,BulletSpeed));
+            
+            
         }
         else
         {
+            
             if (!PlayerControllerScript.bIsAimingUp)
                 BulletPlace.AddForce(-BulletSpawn.transform.right * BulletSpeed);
             else if (PlayerControllerScript.bIsAimingUp)
@@ -72,6 +78,10 @@ public class Shooting : MonoBehaviour
                 Spawnblock();
             }
         }
-
+        if (ammo > GetComponent<PlayerController>().iMaxAmmo)
+        {
+            ammo = GetComponent<PlayerController>().iMaxAmmo;
+        }
+        ammobar.fillAmount = (float)ammo / 10;
     }
 }

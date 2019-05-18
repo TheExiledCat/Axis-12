@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FuserScript : Enemy
 {
-    
+    public GameObject heart;
     bool bIsMoving = true;
     // Start is called before the first frame update
     void Start()
@@ -13,16 +13,16 @@ public class FuserScript : Enemy
         sr = GetComponent<SpriteRenderer>();
         bIsFacingRight = false;
         rb = GetComponent<Rigidbody2D>();
-        
+
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        if (bIsMoving&&bIsFacingRight)
+        if (bIsMoving && bIsFacingRight)
         {
             rb.velocity = transform.right * fMoveSpeed;
-        }else if (bIsMoving && !bIsFacingRight)
+        } else if (bIsMoving && !bIsFacingRight)
         {
             rb.velocity = -transform.right * fMoveSpeed;
         }
@@ -45,6 +45,10 @@ public class FuserScript : Enemy
         Destroy(rb);
         Destroy(GetComponent<BoxCollider2D>());
         yield return new WaitForSeconds(1.5f);
+        if (Random.Range(0, 4) == 0)
+        {
+            Instantiate(heart, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
     private IEnumerator Turn(float waitTime)
@@ -57,11 +61,12 @@ public class FuserScript : Enemy
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall")||collision.gameObject.CompareTag("Enemy"))
         {
             
             StartCoroutine(Turn(2f));
         }
+        
         
     }
     private void OnTriggerEnter2D(Collider2D collision)

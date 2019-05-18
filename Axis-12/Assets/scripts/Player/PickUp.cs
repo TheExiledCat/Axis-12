@@ -20,8 +20,11 @@ public class PickUp : MonoBehaviour
         {
             case "Gem":
                 {
-                    items[0].amount++;
                     Destroy(collision.gameObject);
+                    items[0].amount++;
+                    
+                    
+                    GetComponent<Shooting>().ammo++;
                     break;
                 }
             case "Key":
