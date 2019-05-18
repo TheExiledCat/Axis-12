@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ClickDoor : MonoBehaviour
 {
+    public bool locked;
 
-    GameObject Door;
-
+    public GameObject Door;
+    public GameObject Door1;
     // Start is called before the first frame update
     private void Start()
     {
-        Door = transform.parent.gameObject;
+        //Door = transform.parent.gameObject;
     }
 
     private IEnumerator OnMouseDown()
@@ -45,7 +46,8 @@ public class ClickDoor : MonoBehaviour
 
 
         //}
-        Door.GetComponent<SpriteRenderer>().enabled = false;
+        Door.SetActive(false);
+        Door1.SetActive(false);
         Debug.Log("Door opend");
         yield return new WaitForSeconds(5);
         Debug.Log("and now the for loop");
@@ -60,8 +62,12 @@ public class ClickDoor : MonoBehaviour
 
         //    yield return new WaitForEndOfFrame();
         //}
-        Door.GetComponent<SpriteRenderer>().enabled = true;
-
+        if (!locked)
+        {
+            Door.SetActive(true);
+            Door1.SetActive(true);
+        }
+        
         Debug.Log("Door closed");
 
 
@@ -77,7 +83,17 @@ public class ClickDoor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            if(!locked)
             StartCoroutine("UnlockDoor");
+            else if (locked)
+            {
+                if (GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount > 0)
+                {
+                    StartCoroutine("UnlockDoor");
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount--;
+
+                }
+            }
         }
     }
 }

@@ -14,20 +14,29 @@ public class CameraMove : MonoBehaviour
     public float xMin1;
     public float xMax1;
     bool bInNewRoom = false;
-    public GameObject check;
+     GameObject check;
+    public GameObject hitbox;
+    public bool locked;
     private void Start()
     {
-        
+        check = GameObject.FindGameObjectWithTag("PlayerCheck");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject==check)
         {
+            Debug.Log(bInNewRoom);
+            if (!locked)
+            {
+                hitbox.GetComponent<ClickDoor>().Door.SetActive(true);
+                hitbox.GetComponent<ClickDoor>().Door1.SetActive(true);
+            }
             
             if (bInNewRoom)
             {
                 GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(transform.position.x - 2, collision.gameObject.transform.position.y);
-                bInNewRoom = !bInNewRoom;
+                bInNewRoom = false;
+                Debug.Log(bInNewRoom);
                 Camera.main.GetComponent<cameraFollow>().xMax = xMax1;
                 Camera.main.GetComponent<cameraFollow>().yMax = yMax1;
                 Camera.main.GetComponent<cameraFollow>().xMin = xMin1;
@@ -35,13 +44,15 @@ public class CameraMove : MonoBehaviour
             }
             else if (!bInNewRoom)
             {
+                bInNewRoom = true;
                 GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(transform.position.x + 2, collision.gameObject.transform.position.y);
                 xMin1 = Camera.main.GetComponent<cameraFollow>().xMin;
                 yMin1 = Camera.main.GetComponent<cameraFollow>().yMin;
                 xMax1 = Camera.main.GetComponent<cameraFollow>().xMax;
                 yMax1 = Camera.main.GetComponent<cameraFollow>().yMax;
-                bInNewRoom = !bInNewRoom;
-            Camera.main.GetComponent<cameraFollow>().xMax = xMax;
+                
+                Debug.Log(bInNewRoom);
+                Camera.main.GetComponent<cameraFollow>().xMax = xMax;
             Camera.main.GetComponent<cameraFollow>().yMax = yMax;
             Camera.main.GetComponent<cameraFollow>().xMin = xMin;
             Camera.main.GetComponent<cameraFollow>().yMin = yMin;
