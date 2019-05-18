@@ -4,30 +4,17 @@ using UnityEngine;
 
 public class Bullets : MonoBehaviour
 {
-    private GameObject DoorSpawn;
-    public GameObject Door;
+    
 
-    private void Awake()
-    {
-        DoorSpawn = GameObject.Find("Cono");
-        GameObject Deur;
-        Deur = Instantiate(Door, DoorSpawn.transform.position, DoorSpawn.transform.rotation);
-    }
-    void Start()
-    {
-        
-    }
+    
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject == Door)
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Wall"))
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 
-    void Update()
-    {
-        
-    }
+    
 }

@@ -40,6 +40,13 @@ public class HealthGen : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            LoseHP(collision.gameObject.GetComponent<Enemy>().iDamage);
+        }
+    }
     public void LoseHP(int damage)
     {
         iHP -= damage;

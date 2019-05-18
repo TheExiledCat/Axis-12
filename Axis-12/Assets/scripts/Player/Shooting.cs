@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
     public GameObject BulletSpawn;
     public float BulletSpeed;
     [HideInInspector]
-    public  int ammo;
+    public int ammo;
     private bool Click = true;
     PlayerController PlayerControllerScript;
     public Image ammobar;
@@ -18,25 +18,22 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
-        
+
         PlayerControllerScript = GetComponent<PlayerController>();
         ammo = PlayerControllerScript.iMaxAmmo;
 
     }
 
 
-    private void Spawnblock() {
- 
-        
+    private void Spawnblock()
+    {
+
+
         Debug.Log("starting the bullet instanciate function");
-        if (ammo == 0)
-        {
-            Debug.Log("ending the function");
-            return;
-        }
-        Debug.Log("shoot"); 
-        GameObject  BulletInstance;
-        
+
+        Debug.Log("shoot");
+        GameObject BulletInstance;
+
         BulletInstance = Instantiate(Bullet, BulletSpawn.transform.position, BulletSpawn.transform.rotation) as GameObject;
 
 
@@ -46,18 +43,18 @@ public class Shooting : MonoBehaviour
         Debug.Log(ammo);
         if (GetComponent<PlayerController>().bIsFacingRight)
         {
-            
-            
-if(!PlayerControllerScript.bIsAimingUp)
-            BulletPlace.AddForce(BulletSpawn.transform.right * BulletSpeed);
-            else if(PlayerControllerScript.bIsAimingUp)
-            BulletPlace.AddForce(new Vector2(BulletSpeed,BulletSpeed));
-            
-            
+
+
+            if (!PlayerControllerScript.bIsAimingUp)
+                BulletPlace.AddForce(BulletSpawn.transform.right * BulletSpeed);
+            else if (PlayerControllerScript.bIsAimingUp)
+                BulletPlace.AddForce(new Vector2(BulletSpeed, BulletSpeed));
+
+
         }
         else
         {
-            
+
             if (!PlayerControllerScript.bIsAimingUp)
                 BulletPlace.AddForce(-BulletSpawn.transform.right * BulletSpeed);
             else if (PlayerControllerScript.bIsAimingUp)
@@ -66,7 +63,11 @@ if(!PlayerControllerScript.bIsAimingUp)
         Destroy(BulletInstance, 2f);
 
     }
-
+    IEnumerator WaitForShot(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+        Click = true;
+    }
     void Update()
     {
         if (Click == true)
@@ -76,12 +77,14 @@ if(!PlayerControllerScript.bIsAimingUp)
                 Debug.Log("u clicked");
                 Debug.Log("pressed space bullet will now spawn");
                 Spawnblock();
+                Click = false;
+                StartCoroutine(WaitForShot(0.2f));
             }
         }
         if (ammo > GetComponent<PlayerController>().iMaxAmmo)
         {
             ammo = GetComponent<PlayerController>().iMaxAmmo;
         }
-        ammobar.fillAmount = (float)ammo / 10;
+        ammobar.fillAmount = (float)ammo / GetComponent<PlayerController>().iMaxAmmo;
     }
 }

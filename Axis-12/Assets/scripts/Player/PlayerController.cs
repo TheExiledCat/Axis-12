@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     public float fMoveSpeed;
     public Transform check;
+    public Transform check1;
     public float fJumpHeight;
     public LayerMask ground;
     public int iMaxAmmo = 10;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     float fMoveIn;
     public bool bIsFacingRight = true;
     bool bIsGrounded;
+    bool bIsGrounded1;
     public bool bIsAimingUp;
     public bool bIsWalking;
     public bool bIsCrouching;
@@ -41,22 +43,22 @@ public class PlayerController : MonoBehaviour
 
         //state machines
         bIsGrounded = Physics2D.OverlapCircle(check.position, 0.1f, ground);
-
+        bIsGrounded1 = Physics2D.OverlapCircle(check1.position, 0.1f, ground);
         fMoveIn = Input.GetAxis("Horizontal");
 
-        if(!bIsCrouching)
-        rb.velocity = new Vector3(fMoveIn * fMoveSpeed, rb.velocity.y, 0);
+        if (!bIsCrouching)
+            rb.velocity = new Vector3(fMoveIn * fMoveSpeed, rb.velocity.y, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space) && bIsGrounded&&!bIsCrouching)
+        if (Input.GetKeyDown(KeyCode.Space) && (bIsGrounded||bIsGrounded1)&&!bIsCrouching)
         {
             rb.velocity = new Vector3(rb.velocity.x, fJumpHeight, 0);
         }
-        if (fMoveIn > 0 && bIsGrounded)
+        if (fMoveIn > 0 && (bIsGrounded || bIsGrounded1))
         {
             bIsFacingRight = true;
 
         }
-        if (fMoveIn < 0 && bIsGrounded)
+        if (fMoveIn < 0 && (bIsGrounded || bIsGrounded1))
         {
             bIsFacingRight = false;
         }
@@ -133,5 +135,5 @@ public class PlayerController : MonoBehaviour
     {
         GetComponent<PickUp>().items[1].amount++;
     }
-
+    
 }
