@@ -12,6 +12,8 @@ TagManager:
   - Door
   - Bullet
   - Ground
+  - ChestTrigger
+  - PlayerCheck
   layers:
   - Default
   - TransparentFX
