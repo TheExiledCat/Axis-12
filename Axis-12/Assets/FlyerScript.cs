@@ -52,10 +52,7 @@ public class FlyerScript : Enemy
             hp--;
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+       
     }
     IEnumerator Die()
     {

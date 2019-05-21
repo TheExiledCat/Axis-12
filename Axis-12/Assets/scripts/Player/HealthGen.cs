@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class HealthGen : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class HealthGen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (iHP <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         if (iHP > iHearts)
         {
             iHP = iHearts;
@@ -39,12 +44,14 @@ public class HealthGen : MonoBehaviour
             iHP++;
             Destroy(collision.gameObject);
         }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Flyer"))
         {
             LoseHP(collision.gameObject.GetComponent<Enemy>().iDamage);
+            Destroy(collision.gameObject);
         }
     }
     public void LoseHP(int damage)
