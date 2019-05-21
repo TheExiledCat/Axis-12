@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     SpriteRenderer sr;
@@ -136,4 +136,5 @@ public class PlayerController : MonoBehaviour
         GetComponent<PickUp>().items[1].amount++;
     }
     
+
 }

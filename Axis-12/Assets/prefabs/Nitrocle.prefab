@@ -4853,7 +4853,7 @@ MonoBehaviour:
   bIsFacingRight: 0
   sr: {fileID: 0}
   anim: {fileID: 0}
-  fMoveSpeed: 1
+  fMoveSpeed: 2
   iDamage: 2
   hp: 4
   heart: {fileID: 8765328597369589355, guid: cb54c4335e4478b43b7478012441afa8, type: 3}
