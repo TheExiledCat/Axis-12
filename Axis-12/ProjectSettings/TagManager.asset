@@ -14,6 +14,7 @@ TagManager:
   - Ground
   - ChestTrigger
   - PlayerCheck
+  - Flyer
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: enemies
+    uniqueID: 1896490167
     locked: 0

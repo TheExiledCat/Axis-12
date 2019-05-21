@@ -10,6 +10,7 @@ public class FlyerScript : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         startpos = transform.position;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -28,6 +29,14 @@ public class FlyerScript : Enemy
                 active = false;
             }
         }
+        if (dist.x <0)
+        {
+            sr.flipX = true;
+        }
+        else
+        {
+            sr.flipX = false;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -43,10 +52,7 @@ public class FlyerScript : Enemy
             hp--;
             Destroy(collision.gameObject);
         }
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
+       
     }
     IEnumerator Die()
     {

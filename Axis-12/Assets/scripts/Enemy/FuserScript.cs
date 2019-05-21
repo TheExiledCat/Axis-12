@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FuserScript : Enemy
 {
+    public bool boss = false;
+    
     public GameObject heart;
     bool bIsMoving = true;
     // Start is called before the first frame update
@@ -26,6 +28,10 @@ public class FuserScript : Enemy
         {
             rb.velocity = -transform.right * fMoveSpeed;
         }
+        if (!bIsMoving)
+        {
+            rb.velocity = Vector2.zero;
+        }
         if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 2)
         {
             Boom();
@@ -34,6 +40,8 @@ public class FuserScript : Enemy
         sr.flipX = bIsFacingRight;
         if (hp == 0)
         {
+            if (boss)
+                GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount++;
             StartCoroutine("Die");
             hp--;
         }
@@ -75,6 +83,11 @@ public class FuserScript : Enemy
         {
             hp--;
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+
+            StartCoroutine(Turn(2f));
         }
     }
     void Boom()

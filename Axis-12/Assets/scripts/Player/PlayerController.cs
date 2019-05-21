@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
                 transform.GetChild(1).position = new Vector3(transform.position.x - 0.9f, transform.position.y + 1.6f);
         }
         
-
+        
 
         Vira.GetComponent<Animator>().SetBool("Walking", bIsWalking);
         anim.SetBool("LookingUp", bIsAimingUp);
@@ -136,4 +136,5 @@ public class PlayerController : MonoBehaviour
         GetComponent<PickUp>().items[1].amount++;
     }
     
+
 }

@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f34e3766d2c9e4d868682be6562ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locked: 0
   Door: {fileID: 2443732665462414886}
   Door1: {fileID: 8045668794576136118}
 --- !u!1 &2443732665462414886
@@ -192,7 +193,7 @@ GameObject:
   - component: {fileID: 7360454793328843999}
   m_Layer: 0
   m_Name: Door_Open
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,8 +310,8 @@ MonoBehaviour:
   yMax1: 0
   xMin1: 0
   xMax1: 0
-  check: {fileID: 0}
   hitbox: {fileID: 436779317}
+  locked: 0
 --- !u!1 &8045668794576136118
 GameObject:
   m_ObjectHideFlags: 0
