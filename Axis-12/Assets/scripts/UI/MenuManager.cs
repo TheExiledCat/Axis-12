@@ -6,6 +6,7 @@ public class MenuManager : MonoBehaviour
 {
     public GameObject buttons;
     public GameObject options;
+    public GameObject credits;
     public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -14,6 +15,12 @@ public class MenuManager : MonoBehaviour
     {
         buttons.SetActive(!buttons.activeSelf);
         options.SetActive(!options.activeSelf);
+
+    }
+    public void Credits()
+    {
+        buttons.SetActive(!buttons.activeSelf);
+        credits.SetActive(!credits.activeSelf);
     }
     public void OnApplicationQuit()
     {
