@@ -19,6 +19,11 @@ public class FlyerScript : Enemy
     // Update is called once per frame
     void Update()
     {
+        if (hp == 0)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[0].amount++;
+            Destroy(gameObject);
+        }
         Vector2 dist = transform.position - player.transform.position;
         Debug.Log(dist);
         if (active)

@@ -72,7 +72,9 @@ public class Shooting : MonoBehaviour
     {
         if (Click == true)
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (ammo > 0)
+            {
+ if (Input.GetKeyDown(KeyCode.L))
             {
                 Debug.Log("u clicked");
                 Debug.Log("pressed space bullet will now spawn");
@@ -80,6 +82,8 @@ public class Shooting : MonoBehaviour
                 Click = false;
                 StartCoroutine(WaitForShot(0.2f));
             }
+            }
+           
         }
         if (ammo > GetComponent<PlayerController>().iMaxAmmo)
         {
