@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Shooting : MonoBehaviour
 {
-
+    AudioSource source;
     public GameObject Bullet;
     public GameObject BulletSpawn;
     public float BulletSpeed;
@@ -13,12 +13,12 @@ public class Shooting : MonoBehaviour
     private bool Click = true;
     PlayerController PlayerControllerScript;
     public Image ammobar;
-
+    public AudioClip shot;
 
 
     void Start()
     {
-
+        source = GetComponent<AudioSource>();
         PlayerControllerScript = GetComponent<PlayerController>();
         ammo = PlayerControllerScript.iMaxAmmo;
 
@@ -77,6 +77,7 @@ public class Shooting : MonoBehaviour
  if (Input.GetKeyDown(KeyCode.L))
             {
                 Debug.Log("u clicked");
+                source.PlayOneShot(shot,0.2f);
                 Debug.Log("pressed space bullet will now spawn");
                 Spawnblock();
                 Click = false;
