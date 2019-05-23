@@ -11,6 +11,7 @@ public class HealthGen : MonoBehaviour
     public Image[] hearts;
     public GameObject ui;
     AudioSource source;
+    public GameObject win;
     public AudioClip heal;
     private void Start()
     {
@@ -53,6 +54,13 @@ public class HealthGen : MonoBehaviour
             Destroy(collision.gameObject);
             iHP--;
         }
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            ui.SetActive(false);
+            win.SetActive(true);
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            source.enabled = false;
+        }
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -78,4 +86,5 @@ public class HealthGen : MonoBehaviour
     {
         iHP -= damage;
     }
+
 }
