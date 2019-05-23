@@ -76,7 +76,6 @@ public class Shooting : MonoBehaviour
             {
  if (Input.GetKeyDown(KeyCode.L))
             {
-                    GetComponent<Animator>().SetTrigger("Shot");
                 Debug.Log("u clicked");
                 source.PlayOneShot(shot,0.2f);
                 Debug.Log("pressed space bullet will now spawn");

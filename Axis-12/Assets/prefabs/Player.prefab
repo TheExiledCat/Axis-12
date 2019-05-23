@@ -447,7 +447,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  heal: {fileID: 8300000, guid: 9626fc753a29e2f40ab8f810d2096339, type: 3}
 --- !u!61 &3277433794885944017
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -563,7 +562,6 @@ MonoBehaviour:
   BulletSpeed: 1000
   ammo: 0
   ammobar: {fileID: 0}
-  shot: {fileID: 8300000, guid: 04bc3d02e6f151749856236dc70ae9fb, type: 3}
 --- !u!82 &5592749457914339302
 AudioSource:
   m_ObjectHideFlags: 0

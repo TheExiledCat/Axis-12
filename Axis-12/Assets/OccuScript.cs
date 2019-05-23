@@ -26,12 +26,6 @@ public class OccuScript : Enemy
         {
             bIsFacingRight = false;
         }
-        if (hp <= 0)
-        {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>().ammo++;
-            Destroy(gameObject);
-
-        }
         sr.flipX = bIsFacingRight;
     }
     void Shot()
@@ -48,10 +42,8 @@ public class OccuScript : Enemy
     }
     IEnumerator Emerge()
     {
-        
-        GetComponent<BoxCollider2D>().enabled = false;
         anim.SetTrigger("Emerge");
-        for(int i = 0; i < 40; i++)
+        for(int i = 0; i < 16; i++)
         {
             yield return new WaitForEndOfFrame();
         }
@@ -59,7 +51,6 @@ public class OccuScript : Enemy
     }
     IEnumerator Idle()
     {
-        GetComponent<BoxCollider2D>().enabled = true;
         anim.SetTrigger("Idle");
         for (int i = 0; i < 20; i++)
         {
@@ -76,7 +67,7 @@ public class OccuScript : Enemy
             yield return new WaitForEndOfFrame();
         }
         anim.SetTrigger("Idle");
-        for (int i = 0; i < 40; i++)
+        for (int i = 0; i < 16; i++)
         {
             yield return new WaitForEndOfFrame();
         }
@@ -84,15 +75,12 @@ public class OccuScript : Enemy
     }
     IEnumerator Retreat()
     {
-        GetComponent<BoxCollider2D>().enabled = false;
         anim.SetTrigger("Retreat");
-        for (int i = 0; i < 40; i++)
+        for (int i = 0; i < 16; i++)
         {
             yield return new WaitForEndOfFrame();
         }
-        //Destroy(gameObject);
-        yield return new WaitForSeconds(4);
-        StartCoroutine("Emerge");
+        Destroy(gameObject);
     }
     //IEnumerator Damage()
     //{
