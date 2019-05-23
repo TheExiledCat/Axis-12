@@ -12,6 +12,7 @@ public class FlyerScript : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
         source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -60,6 +61,7 @@ public class FlyerScript : Enemy
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            anim.SetTrigger("hurt");
             hp--;
             Destroy(collision.gameObject);
         }
