@@ -102,6 +102,7 @@ MonoBehaviour:
   fMoveSpeed: 4
   iDamage: 1
   hp: 2
+  fly: {fileID: 8300000, guid: 630958609c8dc9e4289c8ff28ac346a9, type: 3}
 --- !u!50 &8419486931124025633
 Rigidbody2D:
   serializedVersion: 4

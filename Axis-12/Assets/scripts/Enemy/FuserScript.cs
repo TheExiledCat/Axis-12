@@ -5,12 +5,17 @@ using UnityEngine;
 public class FuserScript : Enemy
 {
     public bool boss = false;
-    
+    AudioSource source;
     public GameObject heart;
     bool bIsMoving = true;
+    public AudioClip dmg, death,turn,boom;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
+        source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
         bIsFacingRight = false;
@@ -34,12 +39,18 @@ public class FuserScript : Enemy
         }
         if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 2)
         {
-            Boom();
+            if (rb != null)
+            {
+                Boom();
+            }
+            source.PlayOneShot(boom, 0.2f);
+
             Debug.Log("boom");
         }
         sr.flipX = bIsFacingRight;
         if (hp == 0)
         {
+            source.PlayOneShot(death, 0.2f);
             if (boss)
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount++;
             StartCoroutine("Die");
@@ -61,6 +72,8 @@ public class FuserScript : Enemy
     }
     private IEnumerator Turn(float waitTime)
     {
+        if(Vector3.Distance(transform.position,GameObject.FindGameObjectWithTag("Player").transform.position)<=10)
+        source.PlayOneShot(turn, 0.2f);
         bIsMoving = false;
         yield return new WaitForSeconds(waitTime);
         Debug.Log("turning");
@@ -81,6 +94,7 @@ public class FuserScript : Enemy
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            source.PlayOneShot(dmg, 0.2f);
             hp--;
             Destroy(collision.gameObject);
         }

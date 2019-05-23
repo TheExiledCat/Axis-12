@@ -73,6 +73,7 @@ MonoBehaviour:
   locked: 0
   Door: {fileID: 2443732665462414886}
   Door1: {fileID: 8045668794576136118}
+  open: {fileID: 8300000, guid: 2f221fb6afd70624e98b2da4e5465e1d, type: 3}
 --- !u!1 &2443732665462414886
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,10 +307,6 @@ MonoBehaviour:
   yMax: 2.5
   xMin: 39.6
   xMax: 100
-  yMin1: 0
-  yMax1: 0
-  xMin1: 0
-  xMax1: 0
   hitbox: {fileID: 436779317}
   locked: 0
 --- !u!1 &8045668794576136118

@@ -8,10 +8,11 @@ public class HealthGen : MonoBehaviour
     public int iHP;
     public int iHearts;
     public Image[] hearts;
-   
+    AudioSource source;
+    public AudioClip heal;
     private void Start()
     {
-      
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class HealthGen : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Health")){
             iHP++;
+            source.PlayOneShot(heal, 0.2f);
             Destroy(collision.gameObject);
         }
         
