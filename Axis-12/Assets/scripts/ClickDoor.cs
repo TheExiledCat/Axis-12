@@ -5,12 +5,14 @@ using UnityEngine;
 public class ClickDoor : MonoBehaviour
 {
     public bool locked;
-
+    AudioSource source;
     public GameObject Door;
     public GameObject Door1;
+    public AudioClip open;
     // Start is called before the first frame update
     private void Start()
     {
+        source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         //Door = transform.parent.gameObject;
     }
 
@@ -46,6 +48,7 @@ public class ClickDoor : MonoBehaviour
 
 
         //}
+        source.PlayOneShot(open, 0.2f);
         Door.SetActive(false);
         Door1.SetActive(false);
         Debug.Log("Door opend");

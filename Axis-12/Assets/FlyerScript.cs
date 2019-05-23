@@ -6,10 +6,13 @@ public class FlyerScript : Enemy
 {
     bool active = true;
     GameObject player;
+    AudioSource source;
+    public AudioClip fly;
     Vector3 startpos;
     // Start is called before the first frame update
     void Start()
     {
+        source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         sr = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         startpos = transform.position;
@@ -31,8 +34,11 @@ public class FlyerScript : Enemy
             if (dist.x >= -3&&dist.x<=3)
             {
                 rb.velocity = new Vector2(0, -fMoveSpeed);
+
                 active = false;
+                source.PlayOneShot(fly, 0.2f);
             }
+            
         }
         if (dist.x <0)
         {

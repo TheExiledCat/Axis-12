@@ -7,9 +7,12 @@ public class OpenChest : MonoBehaviour
     bool active = true;
     public GameObject key;
     Animator anim;
+    AudioSource source;
+    public AudioClip open;
     // Start is called before the first frame update
     void Start()
     {
+        source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
 
@@ -40,6 +43,7 @@ public class OpenChest : MonoBehaviour
         Debug.Log("opening the chest to getchu the key");
         //play chest opening animation
         anim.SetTrigger("touch player");
+        source.PlayOneShot(open, 0.2f);
         yield return new WaitForSeconds(2);
         yield return StartCoroutine("SpawningKey");
         
