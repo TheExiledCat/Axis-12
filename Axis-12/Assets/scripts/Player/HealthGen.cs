@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class HealthGen : MonoBehaviour
 {
+    public GameObject deathscreen;
     public int iHP;
     public int iHearts;
     public Image[] hearts;
+    public GameObject ui;
     AudioSource source;
     public AudioClip heal;
     private void Start()
@@ -20,7 +22,10 @@ public class HealthGen : MonoBehaviour
     {
         if (iHP <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            deathscreen.SetActive(true);
+            ui.SetActive(false);
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if (iHP > iHearts)
         {

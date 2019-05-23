@@ -9,11 +9,11 @@ public class CameraMove : MonoBehaviour
     public float yMax;
     public float xMin;
     public float xMax;
-     float yMin1;
-     float yMax1;
-     float xMin1;
-     float xMax1;
-    bool bInNewRoom = false;
+    public float yMin1;
+     public float yMax1;
+     public float xMin1;
+     public float xMax1;
+    public bool bInNewRoom = false;
      GameObject check;
     public GameObject hitbox;
     public bool locked;

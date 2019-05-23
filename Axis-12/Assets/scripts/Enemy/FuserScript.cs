@@ -9,7 +9,7 @@ public class FuserScript : Enemy
     public GameObject heart;
     bool bIsMoving = true;
     public AudioClip dmg, death,turn,boom;
-    
+    public GameObject fire;
     
     // Start is called before the first frame update
     void Start()
@@ -107,6 +107,8 @@ public class FuserScript : Enemy
     void Boom()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthGen>().LoseHP(iDamage);
+        source.PlayOneShot(boom, 0.2f);
+        Instantiate(fire, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
