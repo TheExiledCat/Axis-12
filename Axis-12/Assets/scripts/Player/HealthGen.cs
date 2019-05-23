@@ -22,10 +22,7 @@ public class HealthGen : MonoBehaviour
     {
         if (iHP <= 0)
         {
-            deathscreen.SetActive(true);
-            ui.SetActive(false);
-            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine("DIE");
         }
         if (iHP > iHearts)
         {
@@ -66,6 +63,16 @@ public class HealthGen : MonoBehaviour
             Destroy(collision.gameObject);
         }
         
+    }
+    IEnumerator DIE()
+    {
+        GetComponent<Animator>().SetTrigger("Death");
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        yield return new WaitForSeconds(5f);
+        deathscreen.SetActive(true);
+        ui.SetActive(false);
+        
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void LoseHP(int damage)
     {
