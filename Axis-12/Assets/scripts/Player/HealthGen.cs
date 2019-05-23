@@ -46,6 +46,11 @@ public class HealthGen : MonoBehaviour
             source.PlayOneShot(heal, 0.2f);
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.CompareTag("EBullet"))
+        {
+            Destroy(collision.gameObject);
+            iHP--;
+        }
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -55,6 +60,7 @@ public class HealthGen : MonoBehaviour
             LoseHP(collision.gameObject.GetComponent<Enemy>().iDamage);
             Destroy(collision.gameObject);
         }
+        
     }
     public void LoseHP(int damage)
     {
