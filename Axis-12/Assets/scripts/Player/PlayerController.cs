@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && (bIsGrounded||bIsGrounded1)&&!bIsCrouching)
         {
             rb.velocity = new Vector3(rb.velocity.x, fJumpHeight, 0);
+            anim.SetTrigger("Jump");
         }
         if (fMoveIn > 0 && (bIsGrounded || bIsGrounded1))
         {

@@ -15,6 +15,7 @@ TagManager:
   - ChestTrigger
   - PlayerCheck
   - Flyer
+  - EBullet
   layers:
   - Default
   - TransparentFX

@@ -5,10 +5,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class HealthGen : MonoBehaviour
 {
+    public GameObject deathscreen;
     public int iHP;
     public int iHearts;
     public Image[] hearts;
+    public GameObject ui;
     AudioSource source;
+    public GameObject win;
     public AudioClip heal;
     private void Start()
     {
@@ -20,7 +23,7 @@ public class HealthGen : MonoBehaviour
     {
         if (iHP <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            StartCoroutine("DIE");
         }
         if (iHP > iHearts)
         {
@@ -51,6 +54,13 @@ public class HealthGen : MonoBehaviour
             Destroy(collision.gameObject);
             iHP--;
         }
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            ui.SetActive(false);
+            win.SetActive(true);
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            source.enabled = false;
+        }
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -62,8 +72,19 @@ public class HealthGen : MonoBehaviour
         }
         
     }
+    IEnumerator DIE()
+    {
+        GetComponent<Animator>().SetTrigger("Death");
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        yield return new WaitForSeconds(5f);
+        deathscreen.SetActive(true);
+        ui.SetActive(false);
+        
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
     public void LoseHP(int damage)
     {
         iHP -= damage;
     }
+
 }
