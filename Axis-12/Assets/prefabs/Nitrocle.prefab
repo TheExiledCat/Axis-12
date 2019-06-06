@@ -4862,6 +4862,7 @@ MonoBehaviour:
   death: {fileID: 8300000, guid: 23d0e66afd794564bab07436c5302f3b, type: 3}
   turn: {fileID: 8300000, guid: 8059492e12dc02841bdf993b7624e673, type: 3}
   boom: {fileID: 8300000, guid: f9acac13a6f564245bda43490ed491a4, type: 3}
+  fire: {fileID: 6794072297245460059, guid: fa9a8d6364e21f944a18a75dd07808ee, type: 3}
 --- !u!50 &5546352024643540723
 Rigidbody2D:
   serializedVersion: 4

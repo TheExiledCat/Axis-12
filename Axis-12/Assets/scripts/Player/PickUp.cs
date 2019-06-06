@@ -6,7 +6,7 @@ public class PickUp : MonoBehaviour
 {
     public delegate void PickUpKey();
     public static event PickUpKey OnGet;
-
+    public AudioClip gem;
     public Item[] items; //hardcoding an array :( sorry
     
     private void Start()
@@ -22,7 +22,7 @@ public class PickUp : MonoBehaviour
                 {
                     Destroy(collision.gameObject);
                     items[0].amount++;
-                    
+                    GetComponent<AudioSource>().PlayOneShot(gem, 0.2f);
                     
                     GetComponent<Shooting>().ammo++;
                     break;
