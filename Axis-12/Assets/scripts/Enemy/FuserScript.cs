@@ -52,7 +52,11 @@ public class FuserScript : Enemy
         {
             source.PlayOneShot(death, 0.2f);
             if (boss)
+            {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount++;
+               // GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[0].amount+=4;
+            }
+               
             StartCoroutine("Die");
             hp--;
         }

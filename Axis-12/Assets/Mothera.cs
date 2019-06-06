@@ -1,0 +1,102 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Mothera : Enemy
+{
+    public bool inBattle = true;
+    int phase = 0;
+    public Transform restPos;
+    GameObject player;
+    int attackIndex=0;
+    Vector3 startPos;
+    int wait=80;
+    bool grounded = false;
+    // Start is called before the first frame update
+    void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+        startPos = transform.position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        StartCoroutine(Fly());
+    }
+    
+    IEnumerator Fly()
+    {
+        rb.velocity = new Vector3(fMoveSpeed, 0);
+
+        yield return new WaitForSeconds(3f);
+        rb.velocity = new Vector3(-fMoveSpeed, 0);
+       
+
+        yield return new WaitForSeconds(6f);
+        rb.velocity = new Vector3(fMoveSpeed, 0);
+        yield return new WaitForSeconds(3f);
+        rb.velocity = Vector3.zero;
+        yield return new WaitForSeconds(2f);
+        StartCoroutine(Attack());
+        attackIndex++;
+
+    }
+    IEnumerator Attack()
+    {
+        Vector2 lockPos = player.transform.position;
+        for (int i=0; i < wait; i++)
+        {
+            transform.position = Vector3.MoveTowards(transform.position,lockPos, fMoveSpeed*Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+     
+       
+        for (int i = 0; i < wait ; i++)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, startPos, fMoveSpeed  * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+        yield return new WaitForSeconds(0.5f);
+        if (attackIndex < 2)
+        {
+            StartCoroutine(Fly());
+        }
+        else
+        {
+            attackIndex = 0;
+            StartCoroutine(Rest());
+        }
+    }
+   IEnumerator Rest()
+    {
+     
+        for (int i = 0; i < wait; i++)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, restPos.position, fMoveSpeed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+        grounded = true;
+        yield return new WaitForSeconds(4f);
+        grounded = false;
+        for (int i = 0; i < wait ; i++)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, startPos, fMoveSpeed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+        StartCoroutine(Fly());
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            if (grounded)
+            {
+                hp -= 2;
+            }
+            else
+            {
+                hp--;
+            }
+            Destroy(collision.gameObject);
+        }
+    }
+}

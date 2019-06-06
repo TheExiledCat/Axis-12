@@ -16,6 +16,7 @@ TagManager:
   - PlayerCheck
   - Flyer
   - EBullet
+  - RGem
   layers:
   - Default
   - TransparentFX

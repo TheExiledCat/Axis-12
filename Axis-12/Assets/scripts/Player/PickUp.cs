@@ -33,6 +33,16 @@ public class PickUp : MonoBehaviour
                     Destroy(collision.gameObject);
                     break;
                 }
+            case "RGem":
+                {
+                    collision.gameObject.SetActive(false);
+                    collision.gameObject.GetComponent<Respawn>().respawn();
+                    items[0].amount++;
+                    GetComponent<AudioSource>().PlayOneShot(gem, 0.2f);
+
+                    GetComponent<Shooting>().ammo++;
+                    break;
+                }
             
         }
     }
