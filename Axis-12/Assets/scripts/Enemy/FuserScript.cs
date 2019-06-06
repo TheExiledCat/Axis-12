@@ -106,7 +106,7 @@ public class FuserScript : Enemy
     }
     void Boom()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthGen>().LoseHP(iDamage);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthGen>().LoseHP(iDamage,gameObject);
         source.PlayOneShot(boom, 0.2f);
         Instantiate(fire, transform.position, transform.rotation);
         Destroy(gameObject);

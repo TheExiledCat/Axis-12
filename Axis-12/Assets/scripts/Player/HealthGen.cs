@@ -52,7 +52,7 @@ public class HealthGen : MonoBehaviour
         if (collision.gameObject.CompareTag("EBullet"))
         {
             Destroy(collision.gameObject);
-            iHP--;
+            LoseHP(1,collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Finish"))
         {
@@ -67,7 +67,7 @@ public class HealthGen : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Flyer"))
         {
-            LoseHP(collision.gameObject.GetComponent<Enemy>().iDamage);
+            LoseHP(collision.gameObject.GetComponent<Enemy>().iDamage,collision.gameObject);
             Destroy(collision.gameObject);
         }
         
@@ -82,9 +82,18 @@ public class HealthGen : MonoBehaviour
         
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void LoseHP(int damage)
+    public void LoseHP(int damage,GameObject g)
     {
         iHP -= damage;
+        if (g.transform.position.x > transform.position.x)
+        {
+            transform.position = new Vector3(transform.position.x - 1, transform.position.y);
+        }
+        if (g.transform.position.x < transform.position.x)
+        {
+            transform.position = new Vector3(transform.position.x +1, transform.position.y);
+        }
+        GetComponent<Animator>().SetTrigger("Damage");
     }
 
 }
