@@ -18,13 +18,31 @@ public class PickUp : MonoBehaviour
     {
         switch (collision.gameObject.tag)
         {
-            case "Gem":
+            case "IGem":
                 {
                     Destroy(collision.gameObject);
                     items[0].amount++;
                     GetComponent<AudioSource>().PlayOneShot(gem, 0.2f);
                     
-                    GetComponent<Shooting>().ammo++;
+                    GetComponent<Shooting>().iAmmo++;
+                    break;
+                }
+            case "GGem":
+                {
+                    Destroy(collision.gameObject);
+                    items[0].amount++;
+                    GetComponent<AudioSource>().PlayOneShot(gem, 0.2f);
+
+                    GetComponent<Shooting>().gAmmo++;
+                    break;
+                }
+            case "FGem":
+                {
+                    Destroy(collision.gameObject);
+                    items[0].amount++;
+                    GetComponent<AudioSource>().PlayOneShot(gem, 0.2f);
+
+                    GetComponent<Shooting>().fAmmo++;
                     break;
                 }
             case "Key":
@@ -40,7 +58,7 @@ public class PickUp : MonoBehaviour
                     items[0].amount++;
                     GetComponent<AudioSource>().PlayOneShot(gem, 0.2f);
 
-                    GetComponent<Shooting>().ammo++;
+                    GetComponent<Shooting>().fAmmo++;
                     break;
                 }
             

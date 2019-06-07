@@ -4,24 +4,33 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Shooting : MonoBehaviour
 {
+    public Sprite bar0;
+    public Sprite bar1;
+    public Sprite bar2;
+
     AudioSource source;
-    public GameObject Bullet;
+    public GameObject Bullet0;
+    public GameObject Bullet1;
+    public GameObject Bullet2;
     public GameObject BulletSpawn;
     public float BulletSpeed;
     [HideInInspector]
-    public int ammo;
+    public int fAmmo;
+    public int iAmmo;
+    public int gAmmo;
     private bool Click = true;
     PlayerController PlayerControllerScript;
     public Image ammobar;
     public AudioClip shot;
-
-
+    public int weapon = 0;
+    int currentammo;
     void Start()
     {
         source = GetComponent<AudioSource>();
         PlayerControllerScript = GetComponent<PlayerController>();
-        ammo = PlayerControllerScript.iMaxAmmo;
-
+        fAmmo = PlayerControllerScript.iMaxAmmo/2;
+        iAmmo = PlayerControllerScript.iMaxAmmo ;
+        gAmmo = PlayerControllerScript.iMaxAmmo / 2;
     }
 
 
@@ -33,14 +42,18 @@ public class Shooting : MonoBehaviour
 
         Debug.Log("shoot");
         GameObject BulletInstance;
-
-        BulletInstance = Instantiate(Bullet, BulletSpawn.transform.position, BulletSpawn.transform.rotation) as GameObject;
-
+        switch (weapon)
+        {
+            case 0: BulletInstance = Instantiate(Bullet0, BulletSpawn.transform.position, BulletSpawn.transform.rotation) as GameObject; iAmmo--; break;
+            case 1: BulletInstance = Instantiate(Bullet1, BulletSpawn.transform.position, BulletSpawn.transform.rotation) as GameObject;fAmmo--; break;
+            case 2: BulletInstance = Instantiate(Bullet2, BulletSpawn.transform.position, BulletSpawn.transform.rotation) as GameObject;gAmmo--; break;
+            default: BulletInstance = Instantiate(Bullet0, BulletSpawn.transform.position, BulletSpawn.transform.rotation) as GameObject; iAmmo--; break;
+        }
+   
 
         Rigidbody2D BulletPlace;
         BulletPlace = BulletInstance.GetComponent<Rigidbody2D>();
-        ammo -= 1;
-        Debug.Log(ammo);
+      
         if (GetComponent<PlayerController>().bIsFacingRight)
         {
 
@@ -70,9 +83,36 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            if (weapon > 0)
+            {
+                weapon--;
+            }
+            else
+            {
+                weapon = 2;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (weapon <2)
+            {
+                weapon++;
+            }
+            else
+            {
+                weapon = 0;
+            }
+        }
+        switch (weapon) {
+            case 0: currentammo = iAmmo; ammobar.sprite = bar0;   break;
+            case 1: currentammo = fAmmo; ammobar.sprite = bar1; break;
+            case 2: currentammo = gAmmo; ammobar.sprite = bar2; break;
+        }
         if (Click == true)
         {
-            if (ammo > 0)
+            if ( currentammo> 0)
             {
  if (Input.GetKeyDown(KeyCode.L))
             {
@@ -87,10 +127,23 @@ public class Shooting : MonoBehaviour
             }
            
         }
-        if (ammo > GetComponent<PlayerController>().iMaxAmmo)
+        if (iAmmo > GetComponent<PlayerController>().iMaxAmmo)
         {
-            ammo = GetComponent<PlayerController>().iMaxAmmo;
+            iAmmo = GetComponent<PlayerController>().iMaxAmmo;
         }
-        ammobar.fillAmount = (float)ammo / GetComponent<PlayerController>().iMaxAmmo;
+        else if (fAmmo > GetComponent<PlayerController>().iMaxAmmo)
+        {
+            fAmmo = GetComponent<PlayerController>().iMaxAmmo;
+        }
+        else if (gAmmo > GetComponent<PlayerController>().iMaxAmmo)
+        {
+            gAmmo = GetComponent<PlayerController>().iMaxAmmo;
+        }
+        switch (weapon)
+        {
+            case 0: ammobar.fillAmount = (float)currentammo / GetComponent<PlayerController>().iMaxAmmo;break;
+            default: ammobar.fillAmount = (float)currentammo / GetComponent<PlayerController>().iMaxAmmo*2; break;
+        }
+        
     }
 }
