@@ -7,6 +7,7 @@ public class Options : MonoBehaviour
     AudioSource source;
     public AudioClip menu;
     public AudioClip game;
+    public AudioClip boss;
     bool Sound = true;
     float volume = 0.3f;
     private void Awake()
@@ -28,9 +29,13 @@ public class Options : MonoBehaviour
         {
             source.clip = menu;
         }
-        else
+        else if(SceneManager.GetActiveScene().buildIndex == 1)
         {
             source.clip = game;
+        }
+        else
+        {
+            source.clip = boss;
         }
         if (!Sound)
             source.volume = 0f;

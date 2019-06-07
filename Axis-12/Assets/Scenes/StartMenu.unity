@@ -1405,8 +1405,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34bd4f43a3af599468f494eb0e91b710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 8300000, guid: f8bf371a4d89fa749984efc1c81fb4db, type: 3}
+  menu: {fileID: 8300000, guid: 13b909d0bfd987348b59d22f652afa8b, type: 3}
   game: {fileID: 8300000, guid: 93e69dd954e5aae4a8ba10ac8f43637d, type: 3}
+  boss: {fileID: 8300000, guid: 37e46164292e6774bb013e69378e45b0, type: 3}
 --- !u!4 &811511938
 Transform:
   m_ObjectHideFlags: 0

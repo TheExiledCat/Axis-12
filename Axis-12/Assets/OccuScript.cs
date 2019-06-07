@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class OccuScript : Enemy
 {
+    AudioSource source;
+    public AudioClip rise;
+    public AudioClip shoot;
+    public AudioClip fall;
     int weaknum = 1;
     public GameObject bullet;
     public Transform check;
     // Start is called before the first frame update
     void Start()
     {
+        source = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         bIsFacingRight = false;
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -17,6 +22,7 @@ public class OccuScript : Enemy
     }
     private void Update()
     {
+       
         Vector2 dist = transform.position - GameObject.FindGameObjectWithTag("Player").transform.position;
         if (dist.x < 0)
         {
@@ -51,7 +57,11 @@ public class OccuScript : Enemy
         
         GetComponent<BoxCollider2D>().enabled = false;
         anim.SetTrigger("Emerge");
-        for(int i = 0; i < 40; i++)
+        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 3)
+        {
+            source.PlayOneShot(rise);
+        }
+        for (int i = 0; i < 40; i++)
         {
             yield return new WaitForEndOfFrame();
         }
@@ -69,8 +79,12 @@ public class OccuScript : Enemy
     }
     IEnumerator Shoot()
     {
+
         anim.SetTrigger("Shoot");
-        Shot();
+        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 3)
+        {
+            source.PlayOneShot(shoot);
+        }
         for (int i = 0; i < 20; i++)
         {
             yield return new WaitForEndOfFrame();
@@ -85,6 +99,10 @@ public class OccuScript : Enemy
     IEnumerator Retreat()
     {
         GetComponent<BoxCollider2D>().enabled = false;
+        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 3)
+        {
+            source.PlayOneShot(fall);
+        }
         anim.SetTrigger("Retreat");
         for (int i = 0; i < 40; i++)
         {
