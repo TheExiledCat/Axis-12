@@ -17,6 +17,9 @@ TagManager:
   - Flyer
   - EBullet
   - RGem
+  - FGem
+  - IGem
+  - GGem
   layers:
   - Default
   - TransparentFX

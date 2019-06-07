@@ -10,7 +10,7 @@ public class FuserScript : Enemy
     bool bIsMoving = true;
     public AudioClip dmg, death,turn,boom;
     public GameObject fire;
-    
+    int weaknum = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,14 +26,14 @@ public class FuserScript : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (bIsMoving && bIsFacingRight)
+        if (bIsMoving && bIsFacingRight&&rb!=null)
         {
             rb.velocity = transform.right * fMoveSpeed;
-        } else if (bIsMoving && !bIsFacingRight)
+        } else if (bIsMoving && !bIsFacingRight && rb != null)
         {
             rb.velocity = -transform.right * fMoveSpeed;
         }
-        if (!bIsMoving)
+        if (!bIsMoving && rb != null)
         {
             rb.velocity = Vector2.zero;
         }
@@ -98,9 +98,19 @@ public class FuserScript : Enemy
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            source.PlayOneShot(dmg, 0.2f);
-            hp--;
-            Destroy(collision.gameObject);
+            if (collision.gameObject.GetComponent<Bullets>().type == weaknum)
+            {
+                source.PlayOneShot(dmg, 0.2f);
+                hp-=2;
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                source.PlayOneShot(dmg, 0.2f);
+                hp--;
+                Destroy(collision.gameObject);
+            }
+        
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {

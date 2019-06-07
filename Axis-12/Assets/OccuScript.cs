@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OccuScript : Enemy
 {
-     
+    int weaknum = 1;
     public GameObject bullet;
     public Transform check;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class OccuScript : Enemy
         }
         if (hp <= 0)
         {
-            GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>().ammo++;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>().iAmmo++;
             Destroy(gameObject);
 
         }
