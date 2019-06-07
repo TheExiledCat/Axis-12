@@ -12,9 +12,11 @@ public class Mothera : Enemy
     Vector3 startPos;
     int wait=80;
     bool grounded = false;
+  
     // Start is called before the first frame update
     void Start()
     {
+        bIsFacingRight = true;
         sr = GetComponent<SpriteRenderer>();
         startPos = transform.position;
         player = GameObject.FindGameObjectWithTag("Player");
@@ -22,16 +24,22 @@ public class Mothera : Enemy
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(Fly());
     }
-    
+    private void Update()
+    {
+     
+        sr.flipX = bIsFacingRight;
+    }
     IEnumerator Fly()
     {
         rb.velocity = new Vector3(fMoveSpeed, 0);
 
         yield return new WaitForSeconds(3f);
+        bIsFacingRight = false;
         rb.velocity = new Vector3(-fMoveSpeed, 0);
        
 
         yield return new WaitForSeconds(6f);
+        bIsFacingRight = true;
         rb.velocity = new Vector3(fMoveSpeed, 0);
         yield return new WaitForSeconds(3f);
         rb.velocity = Vector3.zero;
@@ -43,6 +51,15 @@ public class Mothera : Enemy
     IEnumerator Attack()
     {
         Vector2 lockPos = player.transform.position;
+        if (player.transform.position.x > transform.position.x)
+        {
+            bIsFacingRight = true;
+        }
+        else
+        {
+            bIsFacingRight = false;
+        }
+        anim.SetTrigger("Dive");
         for (int i=0; i < wait; i++)
         {
             transform.position = Vector3.MoveTowards(transform.position,lockPos, fMoveSpeed*Time.deltaTime);
@@ -59,6 +76,7 @@ public class Mothera : Enemy
         if (attackIndex < 2)
         {
             StartCoroutine(Fly());
+            anim.SetTrigger("Flying");
         }
         else
         {
@@ -68,13 +86,14 @@ public class Mothera : Enemy
     }
    IEnumerator Rest()
     {
-     
+        
         for (int i = 0; i < wait; i++)
         {
             transform.position = Vector3.MoveTowards(transform.position, restPos.position, fMoveSpeed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
         grounded = true;
+        anim.SetTrigger("Rest");
         yield return new WaitForSeconds(4f);
         grounded = false;
         for (int i = 0; i < wait ; i++)
@@ -83,6 +102,7 @@ public class Mothera : Enemy
             yield return new WaitForEndOfFrame();
         }
         StartCoroutine(Fly());
+        anim.SetTrigger("Flying");
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
