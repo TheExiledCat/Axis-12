@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Mothera : Enemy
 {
+    public int maxHp=50;
     public GameObject finish;
     public bool inBattle = true;
     int phase = 0;
@@ -115,6 +116,7 @@ public class Mothera : Enemy
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            Debug.Log("HIT");
             if (grounded)
             {
                 hp -= 2;
