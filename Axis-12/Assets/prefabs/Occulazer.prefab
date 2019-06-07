@@ -121,6 +121,9 @@ MonoBehaviour:
   fMoveSpeed: 0
   iDamage: 0
   hp: 3
+  rise: {fileID: 8300000, guid: 632a927d613debc43871d2376c847fbb, type: 3}
+  shoot: {fileID: 8300000, guid: d3d8dd6b9864d5d4b879a2aee10a087c, type: 3}
+  fall: {fileID: 8300000, guid: b1d20c6488d237e4e84a2c63ac38e920, type: 3}
   bullet: {fileID: 5816326913960882777, guid: 5d370022c657c7d49ac1dba76ce99ca6, type: 3}
   check: {fileID: 123699314750147849}
 --- !u!61 &879276449
