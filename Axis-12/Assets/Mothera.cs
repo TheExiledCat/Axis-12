@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Mothera : Enemy
 {
+    public GameObject finish;
     public bool inBattle = true;
     int phase = 0;
-    public Transform restPos;
+    Vector3 restPos;
     GameObject player;
     int attackIndex=0;
     Vector3 startPos;
@@ -16,6 +17,7 @@ public class Mothera : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        restPos = GameObject.FindGameObjectWithTag("rest").transform.position;
         bIsFacingRight = true;
         sr = GetComponent<SpriteRenderer>();
         startPos = transform.position;
@@ -26,7 +28,12 @@ public class Mothera : Enemy
     }
     private void Update()
     {
-     
+        if (hp == 0)
+        {
+            hp--;
+            Instantiate(finish, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
         sr.flipX = bIsFacingRight;
     }
     IEnumerator Fly()
@@ -65,7 +72,7 @@ public class Mothera : Enemy
             transform.position = Vector3.MoveTowards(transform.position,lockPos, fMoveSpeed*Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
-     
+        anim.SetTrigger("Flying");
        
         for (int i = 0; i < wait ; i++)
         {
@@ -89,7 +96,7 @@ public class Mothera : Enemy
         
         for (int i = 0; i < wait; i++)
         {
-            transform.position = Vector3.MoveTowards(transform.position, restPos.position, fMoveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, restPos, fMoveSpeed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
         grounded = true;
