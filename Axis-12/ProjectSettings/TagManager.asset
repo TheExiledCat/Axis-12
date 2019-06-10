@@ -21,6 +21,7 @@ TagManager:
   - IGem
   - GGem
   - rest
+  - Boss
   layers:
   - Default
   - TransparentFX

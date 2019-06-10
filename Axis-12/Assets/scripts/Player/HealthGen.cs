@@ -31,7 +31,7 @@ public class HealthGen : MonoBehaviour
         }
         for (int i = 0; i < hearts.Length; i++)
         {
-           
+
             if (i < iHP)
             {
                 hearts[i].enabled = true;
@@ -44,7 +44,8 @@ public class HealthGen : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Health")){
+        if (collision.gameObject.CompareTag("Health"))
+        {
             iHP++;
             source.PlayOneShot(heal, 0.2f);
             Destroy(collision.gameObject);
@@ -52,7 +53,7 @@ public class HealthGen : MonoBehaviour
         if (collision.gameObject.CompareTag("EBullet"))
         {
             Destroy(collision.gameObject);
-            LoseHP(1,collision.gameObject);
+            LoseHP(1, collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Finish"))
         {
@@ -61,16 +62,22 @@ public class HealthGen : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             source.enabled = false;
         }
-        
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+
+            LoseHP(1, collision.gameObject);
+        }
+
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Flyer"))
         {
-            LoseHP(collision.gameObject.GetComponent<Enemy>().iDamage,collision.gameObject);
+            LoseHP(collision.gameObject.GetComponent<Enemy>().iDamage, collision.gameObject);
             Destroy(collision.gameObject);
         }
-        
+
     }
     IEnumerator DIE()
     {
@@ -79,20 +86,20 @@ public class HealthGen : MonoBehaviour
         yield return new WaitForSeconds(5f);
         deathscreen.SetActive(true);
         ui.SetActive(false);
-        
+
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    public void LoseHP(int damage,GameObject g)
+    public void LoseHP(int damage, GameObject g)
     {
-        iHP -= damage;
-        if (g.transform.position.x > transform.position.x)
-        {
-            transform.position = new Vector3(transform.position.x - 1, transform.position.y);
-        }
-        if (g.transform.position.x < transform.position.x)
-        {
-            transform.position = new Vector3(transform.position.x +1, transform.position.y);
-        }
+       //iHP -= damage;
+        //if (g.transform.position.x > transform.position.x)
+        //{
+        //    transform.position = new Vector3(transform.position.x - 1, transform.position.y);
+        //}
+        //if (g.transform.position.x < transform.position.x)
+        //{
+        //    transform.position = new Vector3(transform.position.x + 1, transform.position.y);
+        //}
         GetComponent<Animator>().SetTrigger("Damage");
     }
 

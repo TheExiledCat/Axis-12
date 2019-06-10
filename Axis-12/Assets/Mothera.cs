@@ -14,7 +14,7 @@ public class Mothera : Enemy
     Vector3 startPos;
     int wait=80;
     bool grounded = false;
-  
+    public GameObject hitbox;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,7 +89,7 @@ public class Mothera : Enemy
         else
         {
             attackIndex = 0;
-            StartCoroutine(Rest());
+            StartCoroutine("Rest");
         }
     }
    IEnumerator Rest()
@@ -101,6 +101,9 @@ public class Mothera : Enemy
             yield return new WaitForEndOfFrame();
         }
         grounded = true;
+        player.GetComponent<Shooting>().fAmmo = player.GetComponent<PlayerController>().iMaxAmmo;
+        player.GetComponent<Shooting>().iAmmo = player.GetComponent<PlayerController>().iMaxAmmo;
+        player.GetComponent<Shooting>().gAmmo = player.GetComponent<PlayerController>().iMaxAmmo;
         anim.SetTrigger("Rest");
         yield return new WaitForSeconds(4f);
         grounded = false;
@@ -127,5 +130,6 @@ public class Mothera : Enemy
             }
             Destroy(collision.gameObject);
         }
+      
     }
 }

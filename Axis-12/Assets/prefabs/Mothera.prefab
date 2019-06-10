@@ -55,8 +55,9 @@ MonoBehaviour:
   iDamage: 1
   hp: 50
   maxHp: 50
-  finish: {fileID: 0}
+  finish: {fileID: 7474559773316187968, guid: 1a955604ab6cda04b8df6be8fed831ec, type: 3}
   inBattle: 1
+  hitbox: {fileID: 0}
 --- !u!50 &3098901499109495102
 Rigidbody2D:
   serializedVersion: 4

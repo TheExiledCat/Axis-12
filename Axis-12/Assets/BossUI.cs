@@ -9,7 +9,8 @@ public class BossUI : MonoBehaviour
     
     private void Update()
     {
-        if (GameObject.Find("Mothera")!=null)
-        img.fillAmount = (float)GameObject.Find("Mothera").GetComponent<Mothera>().hp / (float)GameObject.Find("Mothera").GetComponent<Mothera>().maxHp;
+        var moth = GameObject.FindGameObjectWithTag("Boss");
+        if (moth!=null)
+        img.fillAmount = (float)moth.GetComponent<Mothera>().hp / moth.GetComponent<Mothera>().maxHp;
     }
 }
