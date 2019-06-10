@@ -37,12 +37,11 @@ public class FuserScript : Enemy
         {
             rb.velocity = Vector2.zero;
         }
-        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 2)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 2&&rb!=null)
         {
-            if (rb != null)
-            {
+           
                 Boom();
-            }
+            
             source.PlayOneShot(boom, 0.2f);
 
             Debug.Log("boom");
