@@ -57,7 +57,7 @@ public class OccuScript : Enemy
         
         GetComponent<BoxCollider2D>().enabled = false;
         anim.SetTrigger("Emerge");
-        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 3)
+        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 7)
         {
             source.PlayOneShot(rise);
         }
@@ -81,10 +81,13 @@ public class OccuScript : Enemy
     {
 
         anim.SetTrigger("Shoot");
-        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 3)
+        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 7)
         {
             source.PlayOneShot(shoot);
+           var am= Instantiate(bullet, check.position, Quaternion.identity);
+            am.GetComponent<Rigidbody2D>().velocity = new Vector2(-4, 0);
         }
+        
         for (int i = 0; i < 20; i++)
         {
             yield return new WaitForEndOfFrame();
@@ -99,7 +102,7 @@ public class OccuScript : Enemy
     IEnumerator Retreat()
     {
         GetComponent<BoxCollider2D>().enabled = false;
-        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 3)
+        if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= 7)
         {
             source.PlayOneShot(fall);
         }
@@ -122,7 +125,7 @@ public class OccuScript : Enemy
         {
             Destroy(collision.gameObject);
             hp--;
-            StartCoroutine("Damage");
+            //StartCoroutine("Damage");
         }
     }
 }
