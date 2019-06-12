@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6aa4e99b97858a449aaac192c4b51813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gem: {fileID: 0}
   items:
   - name: Gems
     amount: 0
@@ -437,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebad9d24e979444081f4d03fae4ae4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathscreen: {fileID: 0}
   iHP: 7
   iHearts: 7
   hearts:
@@ -447,6 +449,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  ui: {fileID: 0}
+  win: {fileID: 0}
   heal: {fileID: 8300000, guid: 9626fc753a29e2f40ab8f810d2096339, type: 3}
 --- !u!61 &3277433794885944017
 BoxCollider2D:
@@ -558,12 +562,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86829d603d5b10e48bc986bb17b3ac34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 2885607829423861322, guid: 6e3c0267ce38ce740bd704494ca55587, type: 3}
+  bar0: {fileID: 21300000, guid: be9061e42b2131f4bbbdb3bb7854dc9c, type: 3}
+  bar1: {fileID: 21300000, guid: 992b239b02e707b419926ff26f8d86ad, type: 3}
+  bar2: {fileID: 21300000, guid: f6f9e48f557e90047956d5fc935d2d21, type: 3}
+  Bullet0: {fileID: 0}
+  Bullet1: {fileID: 0}
+  Bullet2: {fileID: 0}
   BulletSpawn: {fileID: 165676020}
   BulletSpeed: 1000
-  ammo: 0
+  fAmmo: 0
+  iAmmo: 0
+  gAmmo: 0
   ammobar: {fileID: 0}
   shot: {fileID: 8300000, guid: 04bc3d02e6f151749856236dc70ae9fb, type: 3}
+  weapon: 0
 --- !u!82 &5592749457914339302
 AudioSource:
   m_ObjectHideFlags: 0

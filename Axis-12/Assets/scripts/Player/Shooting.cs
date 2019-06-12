@@ -107,8 +107,8 @@ public class Shooting : MonoBehaviour
         }
         switch (weapon) {
             case 0: currentammo = iAmmo; ammobar.sprite = bar0;   break;
-            case 1: currentammo = fAmmo; ammobar.sprite = bar1; break;
-            case 2: currentammo = gAmmo; ammobar.sprite = bar2; break;
+            case 1: currentammo = fAmmo; ammobar.sprite = bar2; break;
+            case 2: currentammo = gAmmo; ammobar.sprite = bar1; break;
         }
         if (Click == true)
         {
