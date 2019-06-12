@@ -11,6 +11,7 @@ public class FuserScript : Enemy
     public AudioClip dmg, death,turn,boom;
     public GameObject fire;
     int weaknum = 0;
+    public GameObject splash;
     // Start is called before the first frame update
     void Start()
     {
@@ -97,6 +98,13 @@ public class FuserScript : Enemy
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            var part = Instantiate(splash,collision.transform.position,Quaternion.identity);
+            switch (collision.gameObject.GetComponent<Bullets>().type)
+            {
+                case 0: part.GetComponent<SpriteRenderer>().sprite = part.GetComponent<Splash>().sprite0; break;
+                case 1: part.GetComponent<SpriteRenderer>().sprite = part.GetComponent<Splash>().sprite1; break;
+                case 2: part.GetComponent<SpriteRenderer>().sprite = part.GetComponent<Splash>().sprite2; break;
+            }
             if (collision.gameObject.GetComponent<Bullets>().type == weaknum)
             {
                 source.PlayOneShot(dmg, 0.2f);
@@ -109,7 +117,9 @@ public class FuserScript : Enemy
                 hp--;
                 Destroy(collision.gameObject);
             }
-        
+           
+
+
         }
         if (collision.gameObject.CompareTag("Enemy"))
         {
