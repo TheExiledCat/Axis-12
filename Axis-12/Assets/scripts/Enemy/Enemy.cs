@@ -13,10 +13,10 @@ public class Enemy : MonoBehaviour
     [HideInInspector]
     public Animator anim;
     public float fMoveSpeed;
-    
+    public GameObject splash;
     public int iDamage;
     public int hp;
-    
-   
-    
+
+
+
 }

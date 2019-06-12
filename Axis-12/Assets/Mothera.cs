@@ -119,6 +119,13 @@ public class Mothera : Enemy
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            var part = Instantiate(splash, collision.transform.position, Quaternion.identity);
+            switch (collision.gameObject.GetComponent<Bullets>().type)
+            {
+                case 0: part.GetComponent<Animator>().SetTrigger("Ice"); break;
+                case 1: part.GetComponent<Animator>().SetTrigger("Fire"); break;
+                case 2: part.GetComponent<Animator>().SetTrigger("Grass"); break;
+            }
             Debug.Log("HIT");
             if (grounded)
             {

@@ -52,6 +52,7 @@ MonoBehaviour:
   sr: {fileID: 0}
   anim: {fileID: 0}
   fMoveSpeed: 5
+  splash: {fileID: 6238889656862745046, guid: 4cb1b21f48e300f43b31ca5fae0e79b0, type: 3}
   iDamage: 1
   hp: 50
   maxHp: 50
