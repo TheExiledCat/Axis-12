@@ -26,7 +26,10 @@ public class FlyerScript : Enemy
         if (hp == 0)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[0].amount++;
-            Destroy(gameObject);
+            anim.SetTrigger("Die");
+            GetComponent<BoxCollider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().gravityScale = 0;
+            Destroy(gameObject,1.5f);
         }
         Vector2 dist = transform.position - player.transform.position;
         Debug.Log(dist);

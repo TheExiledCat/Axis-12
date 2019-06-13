@@ -32,11 +32,12 @@ public class OccuScript : Enemy
         {
             bIsFacingRight = false;
         }
-        if (hp <= 0)
+        if (hp == 0)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Shooting>().iAmmo++;
-            Destroy(gameObject);
-
+            anim.SetTrigger("Die");
+            Destroy(gameObject,1f);
+            hp--;
         }
         sr.flipX = bIsFacingRight;
     }
