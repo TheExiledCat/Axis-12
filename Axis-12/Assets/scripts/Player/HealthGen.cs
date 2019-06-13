@@ -91,7 +91,7 @@ public class HealthGen : MonoBehaviour
     }
     public void LoseHP(int damage, GameObject g)
     {
-       //iHP -= damage;
+     //  iHP -= damage;
         //if (g.transform.position.x > transform.position.x)
         //{
         //    transform.position = new Vector3(transform.position.x - 1, transform.position.y);
