@@ -130,6 +130,10 @@ public class FuserScript : Enemy
     void Boom()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthGen>().LoseHP(iDamage,gameObject);
+        if (boss)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PickUp>().items[1].amount++;
+        }
         source.PlayOneShot(boom, 0.2f);
         Instantiate(fire, transform.position, transform.rotation);
         Destroy(gameObject);
