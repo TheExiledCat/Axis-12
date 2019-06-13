@@ -68,9 +68,9 @@ public class Shooting : MonoBehaviour
         else
         {
 
-            if (!PlayerControllerScript.bIsAimingUp)
+            if (!PlayerControllerScript.bIsAimingUp&&BulletPlace!=null)
                 BulletPlace.AddForce(-BulletSpawn.transform.right * BulletSpeed);
-            else if (PlayerControllerScript.bIsAimingUp)
+            else if (PlayerControllerScript.bIsAimingUp&&BulletPlace!=null)
                 BulletPlace.AddForce(new Vector2(-BulletSpeed, BulletSpeed));
         }
         Destroy(BulletInstance, 2f);
