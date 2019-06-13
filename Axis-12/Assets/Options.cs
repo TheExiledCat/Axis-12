@@ -29,11 +29,11 @@ public class Options : MonoBehaviour
         {
             source.clip = menu;
         }
-        else if(SceneManager.GetActiveScene().buildIndex == 1)
+        else if(SceneManager.GetActiveScene().buildIndex == 2)
         {
             source.clip = game;
         }
-        else
+        else if(SceneManager.GetActiveScene().buildIndex == 3)
         {
             source.clip = boss;
         }
