@@ -7,6 +7,9 @@ public class Shooting : MonoBehaviour
     public Sprite bar0;
     public Sprite bar1;
     public Sprite bar2;
+    public Sprite type0;
+    public Sprite type1;
+    public Sprite type2;
 
     AudioSource source;
     public GameObject Bullet0;
@@ -21,6 +24,7 @@ public class Shooting : MonoBehaviour
     private bool Click = true;
     PlayerController PlayerControllerScript;
     public Image ammobar;
+    public Image typeBar;
     public AudioClip shot;
     public int weapon = 0;
     int currentammo;
@@ -106,9 +110,9 @@ public class Shooting : MonoBehaviour
             }
         }
         switch (weapon) {
-            case 0: currentammo = iAmmo; ammobar.sprite = bar0;   break;
-            case 1: currentammo = fAmmo; ammobar.sprite = bar1; break;
-            case 2: currentammo = gAmmo; ammobar.sprite = bar2; break;
+            case 0: currentammo = iAmmo; ammobar.sprite = bar0;typeBar.sprite = type0; break;
+            case 1: currentammo = fAmmo; ammobar.sprite = bar1; typeBar.sprite = type1; break;
+            case 2: currentammo = gAmmo; ammobar.sprite = bar2; typeBar.sprite = type2; break;
         }
         if (Click == true)
         {

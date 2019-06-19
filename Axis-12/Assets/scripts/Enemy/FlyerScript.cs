@@ -32,7 +32,7 @@ public class FlyerScript : Enemy
             Destroy(gameObject,1.5f);
         }
         Vector2 dist = transform.position - player.transform.position;
-        Debug.Log(dist);
+
         if (active)
         {
             if (dist.x >= -3&&dist.x<=3)
