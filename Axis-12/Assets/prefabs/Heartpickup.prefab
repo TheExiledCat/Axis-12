@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7102264559483979256}
   - component: {fileID: 1442362324711842521}
-  - component: {fileID: 1248742507463632678}
   - component: {fileID: -6688853839745832249}
+  - component: {fileID: 3794391868244520078}
   m_Layer: 0
   m_Name: Heartpickup
   m_TagString: Health
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2350179722267282351, guid: ec5ef44bc7557374c9d6ea082afb7406,
+  m_Sprite: {fileID: -6600738072281735926, guid: 91101d5496caf7d45828310bdf1ef300,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -82,25 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1248742507463632678
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8765328597369589355}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8ae9e54a2e8968e48a810e4f76b50a6e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &-6688853839745832249
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +99,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.310479, y: 8.07}
+    oldSize: {x: 9.245594, y: 7.8599997}
     newSize: {x: 9.310479, y: 8.07}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -127,3 +108,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.310479, y: 8.07}
   m_EdgeRadius: 0
+--- !u!114 &3794391868244520078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8765328597369589355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6c1871faca73b4580b67f7972a38e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
