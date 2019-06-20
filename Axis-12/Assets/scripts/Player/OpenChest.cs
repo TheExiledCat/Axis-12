@@ -16,7 +16,7 @@ public class OpenChest : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private IEnumerator OnCollisionEnter2D(Collision2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player")&&active)
         {

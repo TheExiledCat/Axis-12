@@ -29311,7 +29311,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -23, y: 1, z: 0}
+  - first: {x: -24, y: 1, z: 0}
     second:
       m_TileIndex: 3
       m_TileSpriteIndex: 3
@@ -29320,7 +29320,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -22, y: 1, z: 0}
+  - first: {x: -23, y: 1, z: 0}
     second:
       m_TileIndex: 12
       m_TileSpriteIndex: 12
@@ -29329,7 +29329,7 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
-  - first: {x: -21, y: 1, z: 0}
+  - first: {x: -22, y: 1, z: 0}
     second:
       m_TileIndex: 13
       m_TileSpriteIndex: 13
@@ -52579,7 +52579,7 @@ PrefabInstance:
     - target: {fileID: 8827689674815982081, guid: 4d9b6c2f39f562347b77052734829e20,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.412941
+      value: -26.13
       objectReference: {fileID: 0}
     - target: {fileID: 8827689674815982081, guid: 4d9b6c2f39f562347b77052734829e20,
         type: 3}
@@ -52630,6 +52630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8827689674815982087, guid: 4d9b6c2f39f562347b77052734829e20,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d9b6c2f39f562347b77052734829e20, type: 3}
@@ -55740,7 +55745,7 @@ PrefabInstance:
     - target: {fileID: 5466719427428616075, guid: b0e5348bf6197ec428f8ee4addb304e9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.471642
+      value: -22.54
       objectReference: {fileID: 0}
     - target: {fileID: 5466719427428616075, guid: b0e5348bf6197ec428f8ee4addb304e9,
         type: 3}
@@ -56259,6 +56264,11 @@ PrefabInstance:
       propertyPath: typeBar
       value: 
       objectReference: {fileID: 1320869626}
+    - target: {fileID: 7218898439470007797, guid: 9551c4d59262db44e89faf6de889b91d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 32767
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9551c4d59262db44e89faf6de889b91d, type: 3}
 --- !u!4 &1949987119 stripped
@@ -56757,26 +56767,25 @@ PrefabInstance:
       propertyPath: xMax
       value: 41
       objectReference: {fileID: 0}
-    - target: {fileID: 8500887102006973585, guid: 65ba59b270b7a604f86c24ba3019a769,
+    - target: {fileID: 7360454793328843998, guid: 65ba59b270b7a604f86c24ba3019a769,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b36742b1988d4674fa3efe194a0e0754,
-        type: 3}
-    - target: {fileID: 8500887102006973585, guid: 65ba59b270b7a604f86c24ba3019a769,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.99
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.01
       objectReference: {fileID: 0}
-    - target: {fileID: 8500887102006973585, guid: 65ba59b270b7a604f86c24ba3019a769,
+    - target: {fileID: 7360454793328843998, guid: 65ba59b270b7a604f86c24ba3019a769,
         type: 3}
-      propertyPath: m_Size.y
-      value: 2.88
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.79
       objectReference: {fileID: 0}
-    - target: {fileID: 8500887102006973585, guid: 65ba59b270b7a604f86c24ba3019a769,
+    - target: {fileID: 7360454793328843998, guid: 65ba59b270b7a604f86c24ba3019a769,
         type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360454793328843998, guid: 65ba59b270b7a604f86c24ba3019a769,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 2.79
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65ba59b270b7a604f86c24ba3019a769, type: 3}
