@@ -153,6 +153,7 @@ MonoBehaviour:
   locked: 1
   Door: {fileID: 6778490580402540525}
   Door1: {fileID: 6778490580700206481}
+  open: {fileID: 0}
 --- !u!1 &6778490580402540525
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6778490580402540525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.39, y: -0.03, z: 36.32422}
+  m_LocalPosition: {x: 0.5, y: -0.03, z: 36.32422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6778490580900675383}
@@ -222,7 +223,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9bf1cb4a22a15a41ad3c944b71dc7ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a70e67828d9c06469f52b4d7f3dece1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -246,11 +247,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.31002235, y: 0}
+  m_Offset: {x: 0.24, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7272727, y: 3.5757575}
+    oldSize: {x: 0.55, y: 2.8}
     newSize: {x: 1.7272727, y: 3.5757575}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -285,7 +286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6778490580700206481}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41, y: -0.06, z: 36.32422}
+  m_LocalPosition: {x: -0.47, y: -0.06, z: 36.32422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6778490580900675383}
@@ -328,9 +329,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 91
-  m_Sprite: {fileID: 21300000, guid: e9bf1cb4a22a15a41ad3c944b71dc7ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a4ed2ba53227af4487183375558aee8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.7272727, y: 3.5757575}
@@ -352,18 +353,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.32578754, y: 0}
+  m_Offset: {x: -0.08289623, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.7272727, y: 3.5757575}
+    oldSize: {x: 0.55, y: 2.8}
     newSize: {x: 1.7272727, y: 3.5757575}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4661579, y: 3.5757575}
+  m_Size: {x: 0.27931786, y: 3.5757575}
   m_EdgeRadius: 0
 --- !u!1 &6778490580900675378
 GameObject:
@@ -392,7 +393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6778490580900675378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.57, y: 1.47, z: -36.32422}
+  m_LocalPosition: {x: -21.57, y: 1.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6778490580341570637}
@@ -439,12 +440,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 187
-  m_Sprite: {fileID: 21300000, guid: 0641190ef8c892748830ef53af536f87, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b85eecb2d97ed0c4fa176d9388235ac9, type: 3}
   m_Color: {r: 0.735849, g: 0.15619439, b: 0.15619439, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2.909091}
+  m_Size: {x: 1.04, y: 2.83}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -466,6 +467,11 @@ MonoBehaviour:
   yMax: 0
   xMin: 0
   xMax: 0
+  yMin1: 0
+  yMax1: 0
+  xMin1: 0
+  xMax1: 0
+  bInNewRoom: 0
   hitbox: {fileID: 6778490580341570632}
   locked: 1
 --- !u!61 &6778490580900675382
@@ -485,8 +491,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2.909091}
-    newSize: {x: 1, y: 2.909091}
+    oldSize: {x: 1.04, y: 2.83}
+    newSize: {x: 1.04, y: 2.83}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
