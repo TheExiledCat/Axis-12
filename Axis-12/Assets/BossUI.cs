@@ -11,6 +11,6 @@ public class BossUI : MonoBehaviour
     {
         var moth = GameObject.FindGameObjectWithTag("Boss");
         if (moth!=null)
-        img.fillAmount = (float)moth.GetComponent<Mothera>().hp / moth.GetComponent<Mothera>().maxHp;
+        img.fillAmount = (float)moth.GetComponent<Mothera>().hp / moth.GetComponent<Mothera>().maxHp; 
     }
 }

@@ -41,15 +41,15 @@ public class Mothera : Enemy
     {
         rb.velocity = new Vector3(fMoveSpeed, 0);
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         bIsFacingRight = false;
         rb.velocity = new Vector3(-fMoveSpeed, 0);
        
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4f);
         bIsFacingRight = true;
         rb.velocity = new Vector3(fMoveSpeed, 0);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         rb.velocity = Vector3.zero;
         yield return new WaitForSeconds(2f);
         StartCoroutine(Attack());
